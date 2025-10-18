@@ -1,0 +1,90 @@
+import { Facebook, Instagram } from "lucide-react";
+
+export function ConventionalFooter() {
+  return (
+    <footer className="bg-gray-900 text-white pt-8 pb-16 relative z-10">
+      <div className="container mx-auto px-6 max-w-6xl">
+        <div className="flex items-end justify-center gap-8 mb-12 relative">
+          {/* Middle column - Logo placeholder (elevated) */}
+          <div className="text-center transform -translate-y-6 relative z-10 flex flex-col items-center">
+            <a
+              href="https://adstrategic.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/Copy of ADSTRATEGIC (3).png"
+                alt="ADSTRATEGIC Logo"
+                className="w-96 h-auto mb-4 object-contain hover:scale-105 transition-all duration-300 translate-y-16 cursor-pointer"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-8 mb-10">
+          <a
+            href="#"
+            className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+          >
+            Blog
+          </a>
+          <a
+            href="#"
+            className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+          >
+            Process
+          </a>
+          <a
+            href="#"
+            className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+          >
+            Why choose us?
+          </a>
+          <a
+            href="#"
+            className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+          >
+            Services
+          </a>
+          <a
+            href="#"
+            className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+          >
+            Testimonials
+          </a>
+          <a
+            href="#"
+            className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+          >
+            Contact
+          </a>
+        </div>
+
+        <div className="flex justify-center gap-6 mb-10">
+          <a
+            href="https://www.facebook.com/profile.php?id=61555157255389"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-200"
+            aria-label="Facebook"
+          >
+            <Facebook className="w-6 h-6" />
+          </a>
+          <a
+            href="https://www.instagram.com/adstrategic.agency/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors duration-200"
+            aria-label="Instagram"
+          >
+            <Instagram className="w-6 h-6" />
+          </a>
+        </div>
+
+        <div className="text-center text-gray-400 text-sm border-t border-gray-700 pt-8">
+          © 2025 Adstrategic, Inc. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  );
+}
