@@ -15,29 +15,34 @@ export function FAQSection() {
 
   const faqs = [
     {
-      question: "What exactly is ADSTRATEGIC?",
+      question: "What is AdInvoices?",
       answer:
-        "ADSTRATEGIC is an advanced enterprise AI chatbot that works as your best assistant. It handles intelligent queries, manages bookings and appointments, organizes documents, and connects human teams efficiently.",
+        "AdInvoices is a smart invoicing software designed for freelancers, small businesses, and growing companies. It helps you create professional invoices, manage clients, track payments, and automate your billing workflow.",
     },
     {
-      question: "How does automatic booking management work?",
+      question: "How does the free trial work?",
       answer:
-        "Our AI booking system allows your customers to schedule appointments 24/7. The chatbot verifies availability, confirms schedules, and sends automatic reminders, all without manual intervention.",
+        "You can start a free 7-day trial with full access to all features. No credit card required. After the trial, choose between our Basic ($10/month) or Pro ($20/month) plans.",
     },
     {
-      question: "Is enterprise document management secure?",
+      question: "Can I accept online payments?",
       answer:
-        "Absolutely. ADSTRATEGIC uses enterprise-level encryption and complies with international security standards. Your documents are protected with the highest security technology.",
+        "Yes! The Pro plan includes integrated payment processing with Stripe and PayPal, allowing your clients to pay directly from the invoice.",
     },
     {
-      question: "How does it integrate with our existing systems?",
+      question: "Is my data secure?",
       answer:
-        "ADSTRATEGIC integrates easily with most enterprise platforms. Our technical team provides complete support during implementation to ensure a seamless transition.",
+        "Absolutely. AdInvoices uses enterprise-level encryption and follows industry security standards. Your invoices and client data are protected with the highest security measures.",
     },
     {
-      question: "What does the intelligent human directory include?",
+      question: "Can I use AdInvoices on mobile?",
       answer:
-        "The human directory connects your team intelligently, facilitating internal communication, task assignment, and collaboration. It's like having an AI coordinator that optimizes team productivity.",
+        "Yes! AdInvoices is available as a Progressive Web App (PWA), so you can create and manage invoices from any device, including smartphones and tablets.",
+    },
+    {
+      question: "What payment methods are supported?",
+      answer:
+        "AdInvoices supports Stripe and PayPal for online payments. We're also working on additional payment gateway integrations.",
     },
   ];
 

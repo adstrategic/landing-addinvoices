@@ -2,60 +2,41 @@
 
 import { motion } from "framer-motion";
 import { Check, Sparkles } from "lucide-react";
-import { useState } from "react";
 
 const pricingPlans = [
   {
-    name: "Starter",
-    price: "Free",
-    description: "Perfect for small businesses wanting to test the power of AI",
+    name: "Basic",
+    monthlyPrice: 10,
+    description: "Perfect for freelancers & small teams",
     features: [
-      "50 chatbot interactions per month",
-      "Access to pre-configured FAQs",
-      "Email support",
-      "1 admin user",
+      "Unlimited invoices",
+      "Payment reminders",
+      "Custom templates",
+      "Web & mobile access",
+      "Client management",
+      "Invoice tracking (draft, sent, paid)",
     ],
     popular: false,
-    cta: "Get Started Free",
+    cta: "Start Free Trial",
   },
   {
-    name: "Business",
-    monthlyPrice: 49,
-    annualPrice: 39,
-    description: "Perfect for growing businesses looking to automate processes",
+    name: "Pro",
+    monthlyPrice: 20,
+    description: "For companies & teams",
     features: [
-      "Up to 5,000 chatbot interactions per month",
-      "Integrated bookings and appointments",
-      "Document upload and download",
-      "Connected business directory",
+      "Everything in Basic",
+      "Online payments (Stripe, PayPal)",
+      "Advanced stats & analytics",
+      "Premium templates",
       "Priority support",
-      "3 admin users",
+      "Team collaboration",
     ],
     popular: true,
-    cta: "Start Free 7-Day Trial",
-  },
-  {
-    name: "Enterprise",
-    monthlyPrice: 149,
-    annualPrice: 119,
-    description:
-      "For large enterprises needing maximum customization and scalability",
-    features: [
-      "Unlimited interactions",
-      "Chatbot trained with your own documentation",
-      "Custom integrations (CRM, ERP, etc.)",
-      "Advanced workflow automation",
-      "24/7 dedicated support",
-      "Unlimited admin users",
-    ],
-    popular: false,
-    cta: "Contact Sales",
+    cta: "Start Free Trial",
   },
 ];
 
 export function PricingSection() {
-  const [isAnnual, setIsAnnual] = useState(false);
-
   return (
     <section className="relative py-24 px-4">
       <div className="max-w-7xl mx-auto">
@@ -79,50 +60,17 @@ export function PricingSection() {
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-white to-white/60 bg-clip-text text-transparent mb-4">
-            Choose your plan
+            Simple plans with no hidden fees
           </h2>
 
           <p className="text-lg text-white/60 max-w-2xl mx-auto mb-8">
-            Start transforming your business customer service with our AI
-            Chatbot. Scale your plan as your business grows.
+            AdInvoices adapts to your business — whether you're a freelancer or
+            a growing company.
           </p>
-
-          {/* Monthly/Annual Toggle */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex items-center justify-center gap-4 p-1 bg-white/5 rounded-full border border-white/10 backdrop-blur-sm w-fit mx-auto"
-          >
-            <button
-              onClick={() => setIsAnnual(false)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                !isAnnual
-                  ? "bg-[#2563eb] text-white shadow-lg"
-                  : "text-white/60 hover:text-white/80"
-              }`}
-            >
-              Monthly
-            </button>
-            <button
-              onClick={() => setIsAnnual(true)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 relative ${
-                isAnnual
-                  ? "bg-[#2563eb] text-white shadow-lg"
-                  : "text-white/60 hover:text-white/80"
-              }`}
-            >
-              Annual
-              <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full">
-                Save 20%
-              </span>
-            </button>
-          </motion.div>
         </motion.div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {pricingPlans.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -150,20 +98,10 @@ export function PricingSection() {
                   {plan.name}
                 </h3>
                 <div className="flex items-baseline justify-center gap-1 mb-2">
-                  {plan.price ? (
-                    <span className="text-4xl font-bold text-white">
-                      {plan.price}
-                    </span>
-                  ) : (
-                    <>
-                      <span className="text-4xl font-bold text-white">
-                        ${isAnnual ? plan.annualPrice : plan.monthlyPrice}
-                      </span>
-                      <span className="text-white/60 text-lg">
-                        {isAnnual ? "/year" : "/month"}
-                      </span>
-                    </>
-                  )}
+                  <span className="text-4xl font-bold text-white">
+                    ${plan.monthlyPrice}
+                  </span>
+                  <span className="text-white/60 text-lg">/month</span>
                 </div>
                 <p className="text-white/60 text-sm">{plan.description}</p>
               </div>
@@ -200,16 +138,14 @@ export function PricingSection() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-16"
         >
-          <p className="text-white/60 mb-4">
-            Need a custom solution? We're here to help.
-          </p>
-          <motion.button
+          <motion.a
+            href="/signup"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="text-[#2563eb] hover:text-[#3b82f6] font-medium transition-colors"
+            className="inline-block text-[#2563eb] hover:text-[#3b82f6] font-medium transition-colors"
           >
-            Contact our sales team →
-          </motion.button>
+            Compare Plans →
+          </motion.a>
         </motion.div>
       </div>
     </section>

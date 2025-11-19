@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles } from "lucide-react";
+import { StoreButtons } from "@/components/store-buttons";
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
@@ -33,7 +34,7 @@ export default function Hero() {
                 className="inline-flex items-center gap-2 px-4 py-2 text-sm"
               >
                 <Sparkles className="h-4 w-4" />
-                Enterprise AI Chatbot
+                Smart Invoicing Software
               </Badge>
             </motion.div>
 
@@ -48,9 +49,8 @@ export default function Hero() {
                 id="main-title"
                 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl"
               >
-                An <strong>AI Chatbot</strong> that works <br />
-                as your <strong>best assistant</strong>{" "}
-                <em className="italic">enterprise</em>
+                Create, send, and manage your invoices in minutes with{" "}
+                <strong>AdInvoices</strong>
               </h1>
             </motion.div>
 
@@ -61,8 +61,8 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground"
             >
-              Answer questions, schedule appointments and manage documents with
-              a futuristic and reliable experience.
+              The smart invoicing app built for freelancers, small businesses, and growing companies.  
+              Create professional invoices, get paid faster, and automate your workflow.
             </motion.p>
 
             <motion.div
@@ -73,19 +73,37 @@ export default function Hero() {
             >
               {/* Primary Button */}
               <a
-                href="/demo"
+                href="/signup"
                 className="btn-ad-primary px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:-translate-y-0.5 transition-all duration-200"
               >
-                Try Chatbot
+                Start Free Trial
               </a>
 
               {/* Secondary Button */}
               <a
-                href="/learn-more"
+                href="#pricing"
                 className="btn-ad-secondary px-8 py-4 rounded-full font-medium text-lg border-2 border-ad-secondary text-ad-secondary hover:bg-ad-secondary hover:text-white transition-all duration-200"
               >
-                Learn More
+                View Pricing
               </a>
+            </motion.div>
+
+            {/* SEO Tagline */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="mt-6 text-sm text-muted-foreground text-center"
+            >
+              AdInvoices — Smart invoicing software by AdStrategic.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
+              <StoreButtons />
             </motion.div>
           </div>
         </div>

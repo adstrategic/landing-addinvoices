@@ -8,6 +8,7 @@ import { FAQSection } from "@/components/faq-section";
 import { PricingSection } from "@/components/pricing-section";
 import { ConventionalFooter } from "@/components/conventional-footer";
 import { SponsorsSlider } from "@/components/sponsors-slider";
+import { WhyChoose } from "@/components/why-choose";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -248,6 +249,7 @@ export default function Home() {
       <div id="pricing">
         <PricingSection />
       </div>
+      <WhyChoose />
       <div id="testimonials">
         <TestimonialsSection />
       </div>

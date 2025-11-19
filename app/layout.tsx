@@ -5,9 +5,15 @@ import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ADSTR-b2c-chatbotx",
-  description: "Powered By ADSTRATEGIC",
-  generator: "ADSATRETEGIC",
+  title: "AdInvoices | Smart Invoicing Software for Freelancers & Businesses",
+  description: "Create, send, and manage professional invoices in minutes. AdInvoices helps you automate billing, track clients, and get paid faster.",
+  keywords: "invoicing software, invoice maker, online billing app, freelance invoicing, small business invoicing, invoice management system, AdInvoices by AdStrategic",
+  generator: "AdStrategic",
+  openGraph: {
+    title: "AdInvoices | Smart Invoicing Software for Freelancers & Businesses",
+    description: "Create, send, and manage professional invoices in minutes. AdInvoices helps you automate billing, track clients, and get paid faster.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

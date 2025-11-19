@@ -63,13 +63,17 @@ export default function Features() {
             geist.className
           )}
         >
-          Features
+          Everything you need to invoice like a pro
         </h2>
+        <p className="text-center text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
+          From creating branded invoices to tracking payments online.  
+          AdInvoices combines automation, design, and control in one simple platform.
+        </p>
         <FollowerPointerCard
           title={
             <div className="flex items-center gap-2">
               <span>✨</span>
-              <span>Interactive Features</span>
+              <span>Key Benefits</span>
             </div>
           }
         >
@@ -95,12 +99,11 @@ export default function Features() {
               >
                 <div className="flex flex-col gap-4">
                   <h3 className="text-2xl leading-none font-semibold tracking-tight">
-                    Intelligent Queries
+                    💸 Smart Invoicing
                   </h3>
                   <div className="text-md text-muted-foreground flex flex-col gap-2 text-sm">
                     <p className="max-w-[460px]">
-                      Respond immediately to customers and employees with
-                      accurate information about your company.
+                      Create and send invoices in seconds with custom templates, logos, and digital signatures.
                     </p>
                   </div>
                 </div>
@@ -387,12 +390,11 @@ export default function Features() {
               >
                 <div className="flex flex-col gap-4">
                   <h3 className="text-2xl leading-none font-semibold tracking-tight">
-                    Bookings and Appointments
+                    📩 Integrated Payments
                   </h3>
                   <div className="text-md text-muted-foreground flex flex-col gap-2 text-sm">
                     <p className="max-w-[460px]">
-                      Integrate calendars and allow automatic meeting
-                      scheduling.
+                      Accept Stripe or PayPal payments directly from your invoice.
                     </p>
                   </div>
                 </div>
@@ -456,12 +458,11 @@ export default function Features() {
               >
                 <div className="flex flex-col gap-4">
                   <h3 className="text-2xl leading-none font-semibold tracking-tight">
-                    Document Management
+                    📊 Dashboard Insights
                   </h3>
                   <div className="text-md text-muted-foreground flex flex-col gap-2 text-sm">
                     <p className="max-w-[460px]">
-                      Download company files or upload required documents and
-                      send them directly to the right person.
+                      View income, expenses, and pending invoices in real time.
                     </p>
                   </div>
                 </div>
@@ -565,12 +566,11 @@ export default function Features() {
               >
                 <div className="flex flex-col gap-4">
                   <h3 className="text-2xl leading-none font-semibold tracking-tight">
-                    Human Directory
+                    🚀 Automated Workflow
                   </h3>
                   <div className="text-md text-muted-foreground flex flex-col gap-2 text-sm">
                     <p className="max-w-[460px]">
-                      Escalate the conversation to the right team member without
-                      losing context.
+                      Automatic payment reminders, client management, and organized invoice tracking (draft, sent, paid).
                     </p>
                   </div>
                 </div>

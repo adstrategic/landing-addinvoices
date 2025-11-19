@@ -23,40 +23,28 @@ export function ConventionalFooter() {
 
         <div className="flex flex-wrap justify-center gap-8 mb-10">
           <a
-            href="#"
+            href="#features"
             className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
           >
-            Blog
+            Features
           </a>
           <a
-            href="#"
+            href="#pricing"
             className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
           >
-            Process
+            Pricing
           </a>
           <a
-            href="#"
-            className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-          >
-            Why choose us?
-          </a>
-          <a
-            href="#"
-            className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-          >
-            Services
-          </a>
-          <a
-            href="#"
+            href="#testimonials"
             className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
           >
             Testimonials
           </a>
           <a
-            href="#"
+            href="#faq"
             className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
           >
-            Contact
+            FAQ
           </a>
         </div>
 
@@ -82,7 +70,7 @@ export function ConventionalFooter() {
         </div>
 
         <div className="text-center text-gray-400 text-sm border-t border-gray-700 pt-8">
-          © 2025 Adstrategic, Inc. All rights reserved.
+          © 2025 AdInvoices — Powered by AdStrategic | <a href="#" className="hover:text-white transition-colors">Privacy Policy</a> | <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
         </div>
       </div>
     </footer>
