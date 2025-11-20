@@ -88,7 +88,7 @@ export default function Hero() {
   return (
     <div
       id="hero-section"
-      className="bg-background relative min-h-screen w-full overflow-x-hidden py-32 md:px-6"
+      className="bg-background relative min-h-screen w-full overflow-x-hidden py-20 md:py-32 px-4 md:px-6"
     >
       <img
         src="/vector1.webp"
@@ -96,7 +96,7 @@ export default function Hero() {
         width={300}
         draggable={false}
         height={300}
-        className="absolute top-0 right-0 z-[2] object-cover object-center select-none"
+        className="absolute top-0 right-0 z-[2] object-cover object-center select-none opacity-50 md:opacity-100"
       />
       <img
         src="/vector2.png"
@@ -104,7 +104,7 @@ export default function Hero() {
         width={300}
         height={300}
         draggable={false}
-        className="absolute top-0 left-0 z-[2] object-cover object-center select-none"
+        className="absolute top-0 left-0 z-[2] object-cover object-center select-none opacity-50 md:opacity-100"
       />
       <img
         src="/vector5.webp"
@@ -112,7 +112,7 @@ export default function Hero() {
         width={300}
         draggable={false}
         height={300}
-        className="absolute bottom-0 -left-44 z-[2] -rotate-90 object-cover object-center select-none"
+        className="absolute bottom-0 -left-44 z-[2] -rotate-90 object-cover object-center select-none opacity-50 md:opacity-100"
       />
       <img
         src="/vector6.png"
@@ -120,7 +120,7 @@ export default function Hero() {
         width={300}
         height={300}
         draggable={false}
-        className="absolute -right-44 bottom-0 z-[2] rotate-90 object-cover object-center select-none"
+        className="absolute -right-44 bottom-0 z-[2] rotate-90 object-cover object-center select-none opacity-50 md:opacity-100"
       />
       <div className="container mx-auto px-4 2xl:max-w-[1400px]">
         <motion.div
@@ -147,7 +147,7 @@ export default function Hero() {
               src="/rose.webp"
               alt="Logo"
               draggable={false}
-              className="mx-4 mb-2 inline-block h-12 w-12 md:h-16 md:w-16"
+              className="mx-2 mb-1 inline-block h-10 w-10 md:mx-4 md:mb-2 md:h-16 md:w-16"
             />
             blocks to ship beautiful MVPs fast.
           </motion.h1>
@@ -169,7 +169,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, delay: 0.4 }}
         >
-          <Link prefetch={false} href="/docs/introduction">
+          <Link prefetch={false} href="https://adstrategic.org/" target="_blank" rel="noopener noreferrer">
             <Button className="bg-gradient-to-b from-rose-500 to-rose-700 text-sm text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]">
               Get started
             </Button>

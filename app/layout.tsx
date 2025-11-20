@@ -9,10 +9,23 @@ export const metadata: Metadata = {
   description: "Create, send, and manage professional invoices in minutes. AdInvoices helps you automate billing, track clients, and get paid faster.",
   keywords: "invoicing software, invoice maker, online billing app, freelance invoicing, small business invoicing, invoice management system, AdInvoices by AdStrategic",
   generator: "AdStrategic",
+  icons: {
+    icon: "/adtrategic-logo-blanco.png",
+    shortcut: "/adtrategic-logo-blanco.png",
+    apple: "/adtrategic-logo-blanco.png",
+  },
   openGraph: {
     title: "AdInvoices | Smart Invoicing Software for Freelancers & Businesses",
     description: "Create, send, and manage professional invoices in minutes. AdInvoices helps you automate billing, track clients, and get paid faster.",
     type: "website",
+    images: [
+      {
+        url: "/adtrategic-logo-blanco.png",
+        width: 800,
+        height: 600,
+        alt: "AdInvoices Logo",
+      },
+    ],
   },
 };
 

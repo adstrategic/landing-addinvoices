@@ -1,5 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
 import Hero from "@/components/home/hero";
 import Features from "@/components/features";
 import { TestimonialsSection } from "@/components/testimonials";
@@ -102,7 +104,7 @@ export default function Home() {
           />
         </a>
         <div className="text-white font-bold text-lg tracking-wide absolute left-18">
-          ADSTRG.
+          ADDINV.
         </div>
 
         {/* Desktop Navigation Links */}
@@ -142,7 +144,9 @@ export default function Home() {
             Log In
           </a>
           <a
-            href="/signup"
+            href="https://adstrategic.org/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-md font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center btn-ad-primary shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] px-4 py-2 text-sm"
           >
             Sign Up
@@ -167,76 +171,81 @@ export default function Home() {
 
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="flex items-center justify-center w-10 h-10 rounded-full bg-background/50 border border-border/50"
+          className="flex items-center justify-center w-10 h-10 rounded-full bg-background/50 border border-border/50 text-white"
           aria-label="Toggle menu"
         >
-          <div className="flex flex-col items-center justify-center w-5 h-5 space-y-1">
-            <span
-              className={`block w-4 h-0.5 bg-ad-primary transition-all duration-300 ${
-                isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
-              }`}
-            />
-            <span
-              className={`block w-4 h-0.5 bg-ad-primary transition-all duration-300 ${
-                isMobileMenuOpen ? "opacity-0" : ""
-              }`}
-            />
-            <span
-              className={`block w-4 h-0.5 bg-ad-primary transition-all duration-300 ${
-                isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
-              }`}
-            />
-          </div>
+          {isMobileMenuOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <Menu className="w-6 h-6" />
+          )}
         </button>
       </header>
 
       {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-[9998] bg-black/50 backdrop-blur-sm md:hidden">
-          <div className="absolute top-20 left-4 right-4 bg-ad-navbar/95 backdrop-blur-md border border-border/50 rounded-2xl shadow-2xl p-6">
-            <nav className="flex flex-col space-y-4">
-              <button
-                onClick={() => handleMobileNavClick("features")}
-                className="text-left px-4 py-3 text-lg font-medium text-ad-secondary hover:text-ad-primary transition-colors rounded-lg hover:bg-background/50"
-              >
-                Features
-              </button>
-              <button
-                onClick={() => handleMobileNavClick("pricing")}
-                className="text-left px-4 py-3 text-lg font-medium text-ad-secondary hover:text-ad-primary transition-colors rounded-lg hover:bg-background/50"
-              >
-                Pricing
-              </button>
-              <button
-                onClick={() => handleMobileNavClick("testimonials")}
-                className="text-left px-4 py-3 text-lg font-medium text-ad-secondary hover:text-ad-primary transition-colors rounded-lg hover:bg-background/50"
-              >
-                Testimonials
-              </button>
-              <button
-                onClick={() => handleMobileNavClick("faq")}
-                className="text-left px-4 py-3 text-lg font-medium text-ad-secondary hover:text-ad-primary transition-colors rounded-lg hover:bg-background/50"
-              >
-                FAQ
-              </button>
-              <div className="border-t border-border/50 pt-4 mt-4 flex flex-col space-y-3">
-                <a
-                  href="/login"
-                  className="px-4 py-3 text-lg font-medium text-ad-secondary hover:text-ad-primary transition-colors rounded-lg hover:bg-background/50"
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[9998] bg-black/60 backdrop-blur-sm md:hidden"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="absolute top-0 right-0 bottom-0 w-[80%] max-w-sm bg-ad-navbar border-l border-border/50 shadow-2xl p-6 overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex flex-col space-y-6 mt-16">
+                <button
+                  onClick={() => handleMobileNavClick("features")}
+                  className="text-left px-4 py-3 text-xl font-medium text-ad-secondary hover:text-ad-primary transition-colors rounded-lg hover:bg-white/5"
                 >
-                  Log In
-                </a>
-                <a
-                  href="/signup"
-                  className="px-4 py-3 text-lg font-bold text-center btn-ad-primary rounded-lg shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+                  Features
+                </button>
+                <button
+                  onClick={() => handleMobileNavClick("pricing")}
+                  className="text-left px-4 py-3 text-xl font-medium text-ad-secondary hover:text-ad-primary transition-colors rounded-lg hover:bg-white/5"
                 >
-                  Sign Up
-                </a>
+                  Pricing
+                </button>
+                <button
+                  onClick={() => handleMobileNavClick("testimonials")}
+                  className="text-left px-4 py-3 text-xl font-medium text-ad-secondary hover:text-ad-primary transition-colors rounded-lg hover:bg-white/5"
+                >
+                  Testimonials
+                </button>
+                <button
+                  onClick={() => handleMobileNavClick("faq")}
+                  className="text-left px-4 py-3 text-xl font-medium text-ad-secondary hover:text-ad-primary transition-colors rounded-lg hover:bg-white/5"
+                >
+                  FAQ
+                </button>
+                <div className="border-t border-border/50 pt-6 flex flex-col space-y-4">
+                  <a
+                    href="/login"
+                    className="px-4 py-3 text-xl font-medium text-ad-secondary hover:text-ad-primary transition-colors rounded-lg hover:bg-white/5"
+                  >
+                    Log In
+                  </a>
+                  <a
+                    href="https://adstrategic.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-4 text-xl font-bold text-center btn-ad-primary rounded-xl shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+                  >
+                    Sign Up
+                  </a>
+                </div>
               </div>
-            </nav>
-          </div>
-        </div>
-      )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Hero */}
       <Hero />

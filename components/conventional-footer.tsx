@@ -4,9 +4,9 @@ export function ConventionalFooter() {
   return (
     <footer className="bg-gray-900 text-white pt-8 pb-16 relative z-10">
       <div className="container mx-auto px-6 max-w-6xl">
-        <div className="flex items-end justify-center gap-8 mb-12 relative">
+        <div className="flex items-end justify-center gap-8 mb-8 md:mb-12 relative">
           {/* Middle column - Logo placeholder (elevated) */}
-          <div className="text-center transform -translate-y-6 relative z-10 flex flex-col items-center">
+          <div className="text-center transform -translate-y-4 md:-translate-y-6 relative z-10 flex flex-col items-center">
             <a
               href="https://adstrategic.org/"
               target="_blank"
@@ -15,34 +15,34 @@ export function ConventionalFooter() {
               <img
                 src="/Copy of ADSTRATEGIC (3).png"
                 alt="ADSTRATEGIC Logo"
-                className="w-96 h-auto mb-4 object-contain hover:scale-105 transition-all duration-300 translate-y-16 cursor-pointer"
+                className="w-64 md:w-96 h-auto mb-4 object-contain hover:scale-105 transition-all duration-300 translate-y-12 md:translate-y-16 cursor-pointer"
               />
             </a>
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-8 mb-10">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-8 mb-8 md:mb-10">
           <a
             href="#features"
-            className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+            className="text-gray-300 hover:text-white transition-colors duration-200 font-medium text-sm md:text-base"
           >
             Features
           </a>
           <a
             href="#pricing"
-            className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+            className="text-gray-300 hover:text-white transition-colors duration-200 font-medium text-sm md:text-base"
           >
             Pricing
           </a>
           <a
             href="#testimonials"
-            className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+            className="text-gray-300 hover:text-white transition-colors duration-200 font-medium text-sm md:text-base"
           >
             Testimonials
           </a>
           <a
             href="#faq"
-            className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+            className="text-gray-300 hover:text-white transition-colors duration-200 font-medium text-sm md:text-base"
           >
             FAQ
           </a>

@@ -5,7 +5,6 @@ import type React from "react";
 import { useTheme } from "next-themes";
 import Earth from "./ui/globe";
 import ScrambleHover from "./ui/scramble";
-import { FollowerPointerCard } from "./ui/following-pointer";
 import { motion, useInView } from "framer-motion";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { geist } from "@/lib/fonts";
@@ -59,29 +58,21 @@ export default function Features() {
       >
         <h2
           className={cn(
-            "mb-8 text-center text-4xl font-semibold tracking-tighter text-foreground md:text-[54px] md:leading-[60px]",
+            "mb-8 text-center text-3xl font-semibold tracking-tighter text-foreground md:text-[54px] md:leading-[60px]",
             geist.className
           )}
         >
           Everything you need to invoice like a pro
         </h2>
-        <p className="text-center text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-base md:text-lg text-muted-foreground mb-12 max-w-2xl mx-auto px-4">
           From creating branded invoices to tracking payments online.  
           AdInvoices combines automation, design, and control in one simple platform.
         </p>
-        <FollowerPointerCard
-          title={
-            <div className="flex items-center gap-2">
-              <span>✨</span>
-              <span>Key Benefits</span>
-            </div>
-          }
-        >
-          <div className="cursor-none">
+        <div className="cursor-none">
             <div className="grid grid-cols-12 gap-4 justify-center">
               {/* Feature 1 - Intelligent Queries */}
               <motion.div
-                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-2"
+                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-4 md:p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-2"
                 onMouseEnter={() => setIsCliHovering(true)}
                 onMouseLeave={() => setIsCliHovering(false)}
                 ref={ref}
@@ -107,272 +98,18 @@ export default function Features() {
                     </p>
                   </div>
                 </div>
-                <div className="pointer-events-none flex grow items-center justify-center select-none relative overflow-hidden">
-                  <div
-                    className="relative w-full h-[400px] rounded-xl overflow-hidden"
-                    style={{ borderRadius: "20px" }}
-                  >
-                    {/* AI-themed Neural Network Visual */}
-                    <div className="absolute inset-0">
-                      <img
-                        src="/ai-neural-network.jpg"
-                        alt="AI Neural Network Interface"
-                        className="w-full h-full object-cover rounded-xl"
-                      />
-                    </div>
-
-                    {/* Animated SVG Connecting Lines */}
-                    <motion.div
-                      className="absolute inset-0 flex items-center justify-center"
-                      initial={{ opacity: 0 }}
-                      animate={isCliHovering ? { opacity: 1 } : { opacity: 0 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <svg
-                        width="100%"
-                        height="100%"
-                        viewBox="0 0 121 94"
-                        className="absolute"
-                      >
-                        <motion.path
-                          d="M 60.688 1.59 L 60.688 92.449 M 60.688 92.449 L 119.368 92.449 M 60.688 92.449 L 1.414 92.449"
-                          stroke="rgb(255,222,213)"
-                          fill="transparent"
-                          strokeDasharray="2 2"
-                          initial={{ pathLength: 0 }}
-                          animate={
-                            isCliHovering
-                              ? { pathLength: 1 }
-                              : { pathLength: 0 }
-                          }
-                          transition={{
-                            duration: 2,
-                            ease: "easeInOut",
-                          }}
-                        />
-                      </svg>
-                      <svg
-                        width="100%"
-                        height="100%"
-                        viewBox="0 0 121 94"
-                        className="absolute"
-                      >
-                        <motion.path
-                          d="M 60.688 92.449 L 60.688 1.59 M 60.688 1.59 L 119.368 1.59 M 60.688 1.59 L 1.414 1.59"
-                          stroke="rgb(255,222,213)"
-                          fill="transparent"
-                          strokeDasharray="2 2"
-                          initial={{ pathLength: 0 }}
-                          animate={
-                            isCliHovering
-                              ? { pathLength: 1 }
-                              : { pathLength: 0 }
-                          }
-                          transition={{
-                            duration: 2,
-                            delay: 0.5,
-                            ease: "easeInOut",
-                          }}
-                        />
-                      </svg>
-                    </motion.div>
-
-                    {/* Animated Purple Blur Effect */}
-                    <motion.div
-                      className="absolute top-1/2 left-1/2 w-16 h-16 bg-purple-500 rounded-full blur-[74px] opacity-65 transform -translate-x-1/2 -translate-y-1/2"
-                      initial={{ scale: 1 }}
-                      animate={
-                        isCliHovering
-                          ? { scale: [1, 1.342, 1, 1.342] }
-                          : { scale: 1 }
-                      }
-                      transition={{
-                        duration: 3,
-                        ease: "easeInOut",
-                        repeat: isCliHovering ? Number.POSITIVE_INFINITY : 0,
-                        repeatType: "loop",
-                      }}
-                    />
-
-                    {/* Main Content Container with Staggered Animations */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="flex items-center gap-8">
-                        {/* Left Column */}
-                        <div className="flex flex-col gap-3">
-                          {["Queries", "Analysis", "Reports"].map(
-                            (item, index) => (
-                              <motion.div
-                                key={`left-${index}`}
-                                className="bg-white rounded px-3 py-2 flex items-center gap-2 shadow-sm"
-                                style={{
-                                  backgroundColor: "#ffffff !important",
-                                }}
-                                initial={{ opacity: 1, x: 0 }}
-                                animate={
-                                  isCliHovering ? { x: [-20, 0] } : { x: 0 }
-                                }
-                                transition={{
-                                  duration: 0.5,
-                                  delay: index * 0.1,
-                                }}
-                                whileHover={{ scale: 1.05 }}
-                              >
-                                <div className="w-4 h-4 flex items-center justify-center">
-                                  {/* AI-themed Icons */}
-                                  {index === 0 && (
-                                    <img
-                                      src="/icons/ai-chat.jpg"
-                                      alt="Chat"
-                                      className="w-4 h-4 rounded"
-                                    />
-                                  )}
-                                  {index === 1 && (
-                                    <img
-                                      src="/icons/ai-document.jpg"
-                                      alt="Analysis"
-                                      className="w-4 h-4 rounded"
-                                    />
-                                  )}
-                                  {index === 2 && (
-                                    <img
-                                      src="/icons/ai-network.jpg"
-                                      alt="Reports"
-                                      className="w-4 h-4 rounded"
-                                    />
-                                  )}
-                                </div>
-                                <span
-                                  style={{ color: "#000000 !important" }}
-                                  className="text-sm font-medium"
-                                >
-                                  {item}
-                                </span>
-                              </motion.div>
-                            )
-                          )}
-                        </div>
-
-                        {/* AI-themed Icon */}
-                        <motion.div
-                          className="w-16 h-16 border border-gray-300 rounded-lg overflow-hidden shadow-lg"
-                          initial={{ opacity: 1, scale: 1 }}
-                          animate={
-                            isCliHovering
-                              ? { scale: [1, 1.1, 1] }
-                              : { scale: 1 }
-                          }
-                          transition={{ duration: 0.6, ease: "easeOut" }}
-                          whileHover={{ scale: 1.1, rotate: 5 }}
-                        >
-                          <img
-                            src="/icons/ai-chat.jpg"
-                            alt="AI Chat Icon"
-                            className="w-full h-full object-cover"
-                          />
-                        </motion.div>
-
-                        {/* Right Column */}
-                        <div className="flex flex-col gap-3">
-                          {["Bookings", "Payments", "Support"].map(
-                            (item, index) => (
-                              <motion.div
-                                key={`right-${index}`}
-                                className="bg-white rounded px-3 py-2 flex items-center gap-2 shadow-sm"
-                                style={{
-                                  backgroundColor: "#ffffff !important",
-                                }}
-                                initial={{ opacity: 1, x: 0 }}
-                                animate={
-                                  isCliHovering ? { x: [20, 0] } : { x: 0 }
-                                }
-                                transition={{
-                                  duration: 0.5,
-                                  delay: index * 0.1,
-                                }}
-                                whileHover={{ scale: 1.05 }}
-                              >
-                                <div className="w-4 h-4 flex items-center justify-center">
-                                  {/* AI-themed Icons */}
-                                  {index === 0 && (
-                                    <img
-                                      src="/icons/ai-calendar.jpg"
-                                      alt="Calendar"
-                                      className="w-4 h-4 rounded"
-                                    />
-                                  )}
-                                  {index === 1 && (
-                                    <img
-                                      src="/icons/ai-document.jpg"
-                                      alt="Document"
-                                      className="w-4 h-4 rounded"
-                                    />
-                                  )}
-                                  {index === 2 && (
-                                    <img
-                                      src="/icons/ai-network.jpg"
-                                      alt="Network"
-                                      className="w-4 h-4 rounded"
-                                    />
-                                  )}
-                                </div>
-                                <span
-                                  style={{ color: "#000000 !important" }}
-                                  className="text-sm font-medium"
-                                >
-                                  {item}
-                                </span>
-                              </motion.div>
-                            )
-                          )}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Animated Circular Border */}
-                    <motion.div
-                      className="absolute inset-0 flex items-center justify-center"
-                      initial={{ opacity: 0 }}
-                      animate={isCliHovering ? { opacity: 1 } : { opacity: 0 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <svg
-                        width="350"
-                        height="350"
-                        viewBox="0 0 350 350"
-                        className="opacity-40"
-                      >
-                        <motion.path
-                          d="M 175 1.159 C 271.01 1.159 348.841 78.99 348.841 175 C 348.841 271.01 271.01 348.841 175 348.841 C 78.99 348.841 1.159 271.01 1.159 175 C 1.159 78.99 78.99 1.159 175 1.159 Z"
-                          stroke="rgba(255, 255, 255, 0.38)"
-                          strokeWidth="1.16"
-                          fill="transparent"
-                          strokeDasharray="4 4"
-                          initial={{ pathLength: 0, rotate: 0 }}
-                          animate={
-                            isCliHovering
-                              ? { pathLength: 1, rotate: 360 }
-                              : { pathLength: 0, rotate: 0 }
-                          }
-                          transition={{
-                            pathLength: { duration: 3, ease: "easeInOut" },
-                            rotate: {
-                              duration: 20,
-                              repeat: isCliHovering
-                                ? Number.POSITIVE_INFINITY
-                                : 0,
-                              ease: "linear",
-                            },
-                          }}
-                        />
-                      </svg>
-                    </motion.div>
-                  </div>
+                <div className="flex grow items-center justify-center select-none relative overflow-hidden p-2 md:p-4">
+                  <img
+                    src="/feature4.png"
+                    alt="Smart Invoicing"
+                    className="w-full h-auto max-h-[300px] md:max-h-none object-contain rounded-xl shadow-lg"
+                  />
                 </div>
               </motion.div>
 
               {/* Feature 2 - Bookings and Appointments */}
               <motion.div
-                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-8"
+                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-4 md:p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-8"
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
                 ref={ref}
@@ -405,7 +142,7 @@ export default function Features() {
                       style={{ backgroundColor: "#ffffff !important" }}
                     >
                       <ScrambleHover
-                        text="feature-2"
+                        text="worldwide pay"
                         scrambleSpeed={70}
                         maxIterations={20}
                         useOriginalCharsOnly={false}
@@ -441,7 +178,7 @@ export default function Features() {
 
               {/* Feature 3 - Document Management */}
               <motion.div
-                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-2"
+                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-4 md:p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-2"
                 onMouseEnter={() => setIsFeature3Hovering(true)}
                 onMouseLeave={() => setIsFeature3Hovering(false)}
                 initial={{ opacity: 0, y: 50 }}
@@ -466,89 +203,18 @@ export default function Features() {
                     </p>
                   </div>
                 </div>
-                <div className="flex grow items-center justify-center select-none relative min-h-[300px] p-4">
-                  <div className="w-full max-w-lg">
-                    {/* AI-themed Demo Interface Background */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-20">
-                      <img
-                        src="/ai-demo-interface.jpg"
-                        alt="AI Demo Interface"
-                        className="w-full h-full object-cover rounded-2xl"
-                      />
-                    </div>
-                    <div className="relative rounded-2xl border border-white/10 bg-black/20 dark:bg-white/5 backdrop-blur-sm">
-                      <div className="p-4">
-                        <textarea
-                          className="w-full min-h-[100px] bg-transparent border-none text-white placeholder:text-white/70 resize-none focus:outline-none text-base leading-relaxed"
-                          placeholder="Search the web..."
-                          value={inputValue}
-                          onChange={(e) => setInputValue(e.target.value)}
-                          onKeyDown={handleKeyDown}
-                        />
-                      </div>
-                      <div className="flex items-center justify-between px-4 pb-4">
-                        <div className="flex items-center gap-3">
-                          <button className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              className="text-white/70"
-                            >
-                              <path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
-                            </svg>
-                          </button>
-                          <button className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#5394e7] hover:bg-[#5394e7]/90 transition-colors text-white font-medium">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <circle cx="12" cy="12" r="10"></circle>
-                              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
-                              <path d="M2 12h20"></path>
-                            </svg>
-                            Search
-                          </button>
-                        </div>
-                        <button className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="text-white/70"
-                          >
-                            <path d="m22 2-7 20-4-9-9-4Z"></path>
-                            <path d="M22 2 11 13"></path>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                <div className="flex grow items-center justify-center select-none relative min-h-[200px] md:min-h-[300px] p-2 md:p-4">
+                  <img
+                    src="/feature1.jpg"
+                    alt="Dashboard Insights"
+                    className="w-full h-auto max-h-[300px] md:max-h-none object-contain rounded-xl shadow-lg"
+                  />
                 </div>
               </motion.div>
 
               {/* Feature 4 - Human Directory */}
               <motion.div
-                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-8"
+                className="group border-secondary/40 text-card-foreground relative col-span-12 flex flex-col overflow-hidden rounded-xl border-2 p-4 md:p-6 shadow-xl transition-all ease-in-out md:col-span-6 xl:col-span-6 xl:col-start-8"
                 onMouseEnter={() => setIsFeature4Hovering(true)}
                 onMouseLeave={() => setIsFeature4Hovering(false)}
                 initial={{ opacity: 0, y: 50 }}
@@ -574,21 +240,17 @@ export default function Features() {
                     </p>
                   </div>
                 </div>
-                <div className="flex grow items-center justify-center select-none relative min-h-[300px] p-4">
-                  <div className="relative w-full max-w-sm">
-                    {/* AI-themed Network Visualization */}
-                    <img
-                      src="/ai-neural-network.jpg"
-                      alt="AI Network Visualization"
-                      className="w-full h-auto rounded-lg shadow-lg"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
-                  </div>
+                <div className="flex grow items-center justify-center select-none relative min-h-[200px] md:min-h-[300px] p-2 md:p-4">
+                  <img
+                    src="/feature3.png"
+                    alt="Automated Workflow"
+                    className="w-full h-auto max-h-[300px] md:max-h-none object-contain rounded-xl shadow-lg"
+                  />
                 </div>
               </motion.div>
             </div>
           </div>
-        </FollowerPointerCard>
+
       </motion.div>
     </section>
   );
