@@ -6,7 +6,7 @@ import { Check, Sparkles } from "lucide-react";
 const pricingPlans = [
   {
     name: "Basic",
-    monthlyPrice: 10,
+    monthlyPrice: 11.99,
     description: "Perfect for freelancers & small teams",
     features: [
       "Unlimited invoices",
@@ -21,7 +21,7 @@ const pricingPlans = [
   },
   {
     name: "Pro",
-    monthlyPrice: 20,
+    monthlyPrice: 19.99,
     description: "For companies & teams",
     features: [
       "Everything in Basic",
@@ -32,7 +32,23 @@ const pricingPlans = [
       "Team collaboration",
     ],
     popular: true,
-    cta: "Start Free Trial",
+    cta: "Get Pro Access",
+  },
+  {
+    name: "Lifetime",
+    monthlyPrice: 100,
+    description: "One-time payment for lifetime access",
+    highlight: "Only for first 100 users!",
+    features: [
+      "Everything in Pro",
+      "Faster updates",
+      "Priority support",
+      "Early access to new features",
+      "Lifetime updates",
+      "No monthly fees",
+    ],
+    popular: false,
+    cta: "Get Lifetime Access",
   },
 ];
 
@@ -64,13 +80,13 @@ export function PricingSection() {
           </h2>
 
           <p className="text-lg text-white/60 max-w-2xl mx-auto mb-8">
-            AdInvoices adapts to your business — whether you're a freelancer or
+            AddInvoices adapts to your business — whether you're a freelancer or
             a growing company.
           </p>
         </motion.div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {pricingPlans.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -101,9 +117,16 @@ export function PricingSection() {
                   <span className="text-4xl font-bold text-white">
                     ${plan.monthlyPrice}
                   </span>
-                  <span className="text-white/60 text-lg">/month</span>
+                  <span className="text-white/60 text-lg">
+                    {plan.name === "Lifetime" ? "/one-time" : "/month"}
+                  </span>
                 </div>
                 <p className="text-white/60 text-sm">{plan.description}</p>
+                {plan.highlight && (
+                  <p className="text-white/60 text-sm font-bold">
+                    {plan.highlight}
+                  </p>
+                )}
               </div>
 
               <ul className="space-y-4 mb-8">

@@ -50,7 +50,7 @@ export default function Hero() {
                 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl"
               >
                 Create, send, and manage your invoices in minutes with{" "}
-                <strong>AdInvoices</strong>
+                <strong>AddInvoices</strong>
               </h1>
             </motion.div>
 
@@ -95,7 +95,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.5 }}
               className="mt-6 text-sm text-muted-foreground text-center"
             >
-              AdInvoices — Smart invoicing software by AdStrategic.
+              AddInvoices — Smart invoicing software by AdStrategic.
             </motion.p>
 
             <motion.div

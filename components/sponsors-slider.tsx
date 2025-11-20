@@ -39,7 +39,7 @@ export function SponsorsSlider() {
             Invoice, collect, and organize — all in one place
           </h2>
           <p className="text-ad-secondary text-lg max-w-2xl mx-auto">
-            Get started with AdInvoices in four simple steps
+            Get started with AddInvoices in four simple steps
           </p>
         </motion.div>
 

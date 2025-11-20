@@ -15,9 +15,9 @@ export function FAQSection() {
 
   const faqs = [
     {
-      question: "What is AdInvoices?",
+      question: "What is AddInvoices?",
       answer:
-        "AdInvoices is a smart invoicing software designed for freelancers, small businesses, and growing companies. It helps you create professional invoices, manage clients, track payments, and automate your billing workflow.",
+        "AddInvoices is a smart invoicing software designed for freelancers, small businesses, and growing companies. It helps you create professional invoices, manage clients, track payments, and automate your billing workflow.",
     },
     {
       question: "How does the free trial work?",
@@ -32,17 +32,17 @@ export function FAQSection() {
     {
       question: "Is my data secure?",
       answer:
-        "Absolutely. AdInvoices uses enterprise-level encryption and follows industry security standards. Your invoices and client data are protected with the highest security measures.",
+        "Absolutely. AddInvoices uses enterprise-level encryption and follows industry security standards. Your invoices and client data are protected with the highest security measures.",
     },
     {
-      question: "Can I use AdInvoices on mobile?",
+      question: "Can I use AddInvoices on mobile?",
       answer:
-        "Yes! AdInvoices is available as a Progressive Web App (PWA), so you can create and manage invoices from any device, including smartphones and tablets.",
+        "Yes! AddInvoices is available as a Progressive Web App (PWA), so you can create and manage invoices from any device, including smartphones and tablets.",
     },
     {
       question: "What payment methods are supported?",
       answer:
-        "AdInvoices supports Stripe and PayPal for online payments. We're also working on additional payment gateway integrations.",
+        "AddInvoices supports Stripe and PayPal for online payments. We're also working on additional payment gateway integrations.",
     },
   ];
 

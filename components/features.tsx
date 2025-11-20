@@ -66,7 +66,7 @@ export default function Features() {
         </h2>
         <p className="text-center text-base md:text-lg text-muted-foreground mb-12 max-w-2xl mx-auto px-4">
           From creating branded invoices to tracking payments online.  
-          AdInvoices combines automation, design, and control in one simple platform.
+          AddInvoices combines automation, design, and control in one simple platform.
         </p>
         <div className="cursor-none">
             <div className="grid grid-cols-12 gap-4 justify-center">

@@ -4,7 +4,7 @@ const testimonials = [
   {
     name: "Carlos R.",
     username: "Web Designer",
-    body: "Since using AdInvoices, I get paid 3x faster.",
+    body: "Since using AddInvoices, I get paid 3x faster.",
     img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
   },
   {
@@ -16,7 +16,7 @@ const testimonials = [
   {
     name: "David Chen",
     username: "Freelance Developer",
-    body: "AdInvoices has streamlined my entire billing process. No more chasing payments!",
+    body: "AddInvoices has streamlined my entire billing process. No more chasing payments!",
     img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
   },
   {
@@ -70,7 +70,7 @@ const testimonials = [
   {
     name: "Rachel Green",
     username: "Content Creator",
-    body: "Simple, fast, and reliable. AdInvoices has made invoicing effortless.",
+    body: "Simple, fast, and reliable. AddInvoices has made invoicing effortless.",
     img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
   },
   {
@@ -157,7 +157,7 @@ export function TestimonialsSection() {
           </h2>
 
           <p className="mt-5 relative z-10 text-center text-lg text-zinc-500">
-            Join thousands of freelancers and businesses using AdInvoices to get paid faster and manage their invoicing effortlessly.
+            Join thousands of freelancers and businesses using AddInvoices to get paid faster and manage their invoicing effortlessly.
           </p>
         </div>
 

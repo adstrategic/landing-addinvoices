@@ -24,7 +24,7 @@ export function NewReleasePromo() {
           <div className="relative z-10">
             <div className="mt-8 text-center">
               <h2 className="text-4xl font-bold text-white mb-6">Start invoicing like a professional today</h2>
-              <p className="text-white/80 mb-8 text-lg">Create your free account, customize your invoices, and get paid faster with AdInvoices.</p>
+              <p className="text-white/80 mb-8 text-lg">Create your free account, customize your invoices, and get paid faster with AddInvoices.</p>
               <div className="flex items-center justify-center">
                 <a href="/signup">
                   <div className="group border-border bg-secondary/70 flex h-[64px] cursor-pointer items-center gap-2 rounded-full border p-[11px] mt-10">
@@ -82,13 +82,13 @@ export function NewReleasePromo() {
               }}
               aria-hidden="true"
             >
-              ADINVOICES
+              AddInvoices
             </h1>
             <h1
               className="absolute inset-x-0 mt-[120px] text-center text-[100px] font-semibold text-primary sm:mt-[30px] sm:text-[190px] pointer-events-none"
               aria-hidden="true"
             >
-              ADINVOICES
+              AddInvoices
             </h1>
           </div>
         </div>

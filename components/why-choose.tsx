@@ -53,7 +53,7 @@ export function WhyChoose() {
           </h2>
 
           <p className="text-lg text-white/60 max-w-2xl mx-auto">
-            AdInvoices helps you sell, collect, and grow — powered by{" "}
+            AddInvoices helps you sell, collect, and grow — powered by{" "}
             <strong className="text-white">AI and intelligent automation</strong>.
           </p>
         </motion.div>

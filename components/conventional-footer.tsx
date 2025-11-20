@@ -70,7 +70,7 @@ export function ConventionalFooter() {
         </div>
 
         <div className="text-center text-gray-400 text-sm border-t border-gray-700 pt-8">
-          © 2025 AdInvoices — Powered by AdStrategic | <a href="#" className="hover:text-white transition-colors">Privacy Policy</a> | <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
+          © 2025 AddInvoices — Powered by AdStrategic | <a href="#" className="hover:text-white transition-colors">Privacy Policy</a> | <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
         </div>
       </div>
     </footer>
