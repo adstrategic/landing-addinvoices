@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles } from "lucide-react";
-import { StoreButtons } from "@/components/store-buttons";
+
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
@@ -103,7 +103,18 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              <StoreButtons />
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+                <img
+                  src="/playstore.webp"
+                  alt="Get it on Google Play"
+                  className="h-12 w-auto cursor-pointer hover:opacity-80 transition-opacity"
+                />
+                <img
+                  src="/appstore.webp"
+                  alt="Download on the App Store"
+                  className="h-12 w-auto cursor-pointer hover:opacity-80 transition-opacity"
+                />
+              </div>
             </motion.div>
           </div>
         </div>
