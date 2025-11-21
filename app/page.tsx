@@ -11,17 +11,12 @@ import { PricingSection } from "@/components/pricing-section";
 import { ConventionalFooter } from "@/components/conventional-footer";
 import { SponsorsSlider } from "@/components/sponsors-slider";
 import { WhyChoose } from "@/components/why-choose";
+import { WaitlistSection } from "@/components/waitlist-section";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollRotation, setScrollRotation] = useState(0);
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-    root.classList.remove("light", "system");
-    root.classList.add("dark");
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -111,25 +106,25 @@ export default function Home() {
         <div className="absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-ad-secondary md:flex md:space-x-2">
           <a
             className="relative px-4 py-2 text-ad-secondary hover:text-ad-primary transition-colors cursor-pointer"
-            onClick={(e) => handleDesktopNavClick("features", e)}
+            href="#features"
           >
             Features
           </a>
           <a
             className="relative px-4 py-2 text-ad-secondary hover:text-ad-primary transition-colors cursor-pointer"
-            onClick={(e) => handleDesktopNavClick("pricing", e)}
+            href="#pricing"
           >
             Pricing
           </a>
           <a
             className="relative px-4 py-2 text-ad-secondary hover:text-ad-primary transition-colors cursor-pointer"
-            onClick={(e) => handleDesktopNavClick("testimonials", e)}
+            href="#testimonials"
           >
             Testimonials
           </a>
           <a
             className="relative px-4 py-2 text-ad-secondary hover:text-ad-primary transition-colors cursor-pointer"
-            onClick={(e) => handleDesktopNavClick("faq", e)}
+            href="#faq"
           >
             FAQ
           </a>
@@ -138,18 +133,11 @@ export default function Home() {
         {/* Desktop Login / Sign Up */}
         <div className="flex items-center gap-4">
           <a
-            href="/login"
-            className="font-medium transition-colors hover:text-ad-primary text-ad-secondary text-sm"
-          >
-            Log In
-          </a>
-          <a
-            href="https://adstrategic.org/"
-            target="_blank"
+            href="#waitlist"
             rel="noopener noreferrer"
             className="rounded-md font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center btn-ad-primary shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] px-4 py-2 text-sm"
           >
-            Sign Up
+            Join
           </a>
         </div>
       </header>
@@ -227,18 +215,12 @@ export default function Home() {
                 </button>
                 <div className="border-t border-border/50 pt-6 flex flex-col space-y-4">
                   <a
-                    href="/login"
-                    className="px-4 py-3 text-xl font-medium text-ad-secondary hover:text-ad-primary transition-colors rounded-lg hover:bg-white/5"
-                  >
-                    Log In
-                  </a>
-                  <a
-                    href="https://adstrategic.org/"
+                    href="#waitlist"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-4 py-4 text-xl font-bold text-center btn-ad-primary rounded-xl shadow-lg hover:-translate-y-0.5 transition-all duration-200"
                   >
-                    Sign Up
+                    Join
                   </a>
                 </div>
               </div>
@@ -252,6 +234,9 @@ export default function Home() {
 
       {/* Sections */}
       <SponsorsSlider />
+      <div id="waitlist">
+        <WaitlistSection />
+      </div>
       <div id="features">
         <Features />
       </div>

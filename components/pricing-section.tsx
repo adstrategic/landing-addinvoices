@@ -162,12 +162,12 @@ export function PricingSection() {
           className="text-center mt-16"
         >
           <motion.a
-            href="/signup"
+            href="#waitlist"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-block text-[#2563eb] hover:text-[#3b82f6] font-medium transition-colors"
           >
-            Compare Plans →
+            Join the Waitlist →
           </motion.a>
         </motion.div>
       </div>

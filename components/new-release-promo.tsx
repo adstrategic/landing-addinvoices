@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 export function NewReleasePromo() {
   return (
@@ -9,7 +9,8 @@ export function NewReleasePromo() {
           <div
             className="absolute inset-0 z-0"
             style={{
-              background: "radial-gradient(ellipse 60% 40% at 50% 50%, rgba(255, 64, 23, 0.1), transparent 70%)",
+              background:
+                "radial-gradient(ellipse 60% 40% at 50% 50%, rgba(255, 64, 23, 0.1), transparent 70%)",
             }}
           />
 
@@ -23,10 +24,15 @@ export function NewReleasePromo() {
 
           <div className="relative z-10">
             <div className="mt-8 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Start invoicing like a professional today</h2>
-              <p className="text-white/80 mb-8 text-lg">Create your free account, customize your invoices, and get paid faster with AddInvoices.</p>
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Start invoicing like a professional today
+              </h2>
+              <p className="text-white/80 mb-8 text-lg">
+                Create your free account, customize your invoices, and get paid
+                faster with AddInvoices.
+              </p>
               <div className="flex items-center justify-center">
-                <a href="/signup">
+                <a href="#waitlist">
                   <div className="group border-border bg-secondary/70 flex h-[64px] cursor-pointer items-center gap-2 rounded-full border p-[11px] mt-10">
                     <div className="border-border bg-primary flex h-[43px] items-center justify-center rounded-full border">
                       <p className="mr-3 ml-2 flex items-center justify-center gap-2 font-medium tracking-tight text-white">
@@ -75,7 +81,7 @@ export function NewReleasePromo() {
             </div>
 
             {/* Stroked text wordmark */}
-            <h1
+            <p
               className="absolute inset-x-0 mt-[120px] text-center text-[100px] font-semibold text-white/20 sm:mt-[30px] sm:text-[190px] pointer-events-none"
               style={{
                 WebkitTextStroke: "1px rgba(255, 255, 255, 0.3)",
@@ -83,16 +89,16 @@ export function NewReleasePromo() {
               aria-hidden="true"
             >
               AddInvoices
-            </h1>
-            <h1
+            </p>
+            <p
               className="absolute inset-x-0 mt-[120px] text-center text-[100px] font-semibold text-primary sm:mt-[30px] sm:text-[190px] pointer-events-none"
               aria-hidden="true"
             >
               AddInvoices
-            </h1>
+            </p>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

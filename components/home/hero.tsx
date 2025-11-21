@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles } from "lucide-react";
 
-
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
 
@@ -61,8 +60,9 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground"
             >
-              The smart invoicing app built for freelancers, small businesses, and growing companies.  
-              Create professional invoices, get paid faster, and automate your workflow.
+              The smart invoicing app built for freelancers, small businesses,
+              and growing companies. Create professional invoices, get paid
+              faster, and automate your workflow.
             </motion.p>
 
             <motion.div
@@ -73,10 +73,10 @@ export default function Hero() {
             >
               {/* Primary Button */}
               <a
-                href="/signup"
+                href="#waitlist"
                 className="btn-ad-primary px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:-translate-y-0.5 transition-all duration-200"
               >
-                Start Free Trial
+                Get early access
               </a>
 
               {/* Secondary Button */}

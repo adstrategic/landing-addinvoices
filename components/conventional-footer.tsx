@@ -13,7 +13,7 @@ export function ConventionalFooter() {
               rel="noopener noreferrer"
             >
               <img
-                src="/Copy of ADSTRATEGIC (3).png"
+                src="/adstrategic-text-logo.png"
                 alt="ADSTRATEGIC Logo"
                 className="w-64 md:w-96 h-auto mb-4 object-contain hover:scale-105 transition-all duration-300 translate-y-12 md:translate-y-16 cursor-pointer"
               />
@@ -70,7 +70,14 @@ export function ConventionalFooter() {
         </div>
 
         <div className="text-center text-gray-400 text-sm border-t border-gray-700 pt-8">
-          © 2025 AddInvoices — Powered by AdStrategic | <a href="#" className="hover:text-white transition-colors">Privacy Policy</a> | <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
+          © 2025 AddInvoices — Powered by AdStrategic |{" "}
+          <a href="#" className="hover:text-white transition-colors">
+            Privacy Policy
+          </a>{" "}
+          |{" "}
+          <a href="#" className="hover:text-white transition-colors">
+            Terms of Use
+          </a>
         </div>
       </div>
     </footer>
