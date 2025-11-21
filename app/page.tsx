@@ -234,6 +234,7 @@ export default function Home() {
 
       {/* Sections */}
       <SponsorsSlider />
+      <WhyChoose />
       <div id="waitlist">
         <WaitlistSection />
       </div>
@@ -243,7 +244,6 @@ export default function Home() {
       <div id="pricing">
         <PricingSection />
       </div>
-      <WhyChoose />
       <div id="testimonials">
         <TestimonialsSection />
       </div>

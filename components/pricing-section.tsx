@@ -10,6 +10,7 @@ const pricingPlans = [
     description: "Perfect for freelancers & small teams",
     features: [
       "Unlimited invoices",
+      "Online payments (Stripe, PayPal)",
       "Payment reminders",
       "Custom templates",
       "Web & mobile access",
@@ -25,11 +26,11 @@ const pricingPlans = [
     description: "For companies & teams",
     features: [
       "Everything in Basic",
-      "Online payments (Stripe, PayPal)",
-      "Advanced stats & analytics",
+      "Automated workflows with AI",
+      "AI assistant to manage invoices, clients, expenses, and more",
+      "Voice generation for invoices, clients, expenses, and more",
+
       "Premium templates",
-      "Priority support",
-      "Team collaboration",
     ],
     popular: true,
     cta: "Get Pro Access",

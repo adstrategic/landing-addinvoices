@@ -1,21 +1,8 @@
-"use client";
-
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles } from "lucide-react";
 
 export default function Hero() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
-
   return (
     <>
       <section className="relative overflow-hidden min-h-screen flex flex-col">
@@ -49,9 +36,10 @@ export default function Hero() {
                 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl"
               >
                 Create, send, and manage your invoices in minutes with{" "}
-                <strong>AddInvoices</strong>
+                <strong>AddInvoices AI</strong>
               </h1>
             </motion.div>
+
             {/* Description */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -61,7 +49,8 @@ export default function Hero() {
             >
               The smart invoicing app built for freelancers, small businesses,
               and growing companies. Create professional invoices, get paid
-              faster, and automate your workflow.
+              faster, and automate your workflow with an{" "}
+              <strong>AI assistant</strong> that does the heavy lifting for you.
             </motion.p>
 
             <motion.div

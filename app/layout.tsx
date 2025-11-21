@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     siteName: "AddInvoices",
     images: [
       {
-        url: "/adtrategic-logo-blanco.png",
-        width: 800,
-        height: 600,
-        alt: "AddInvoices Logo",
+        url: "/addinvoices.png",
+        width: 1640,
+        height: 924,
+        alt: "Banner AddInvoices",
       },
     ],
   },
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "AddInvoices - Smart Invoicing Software",
     description:
       "Streamline your billing with AddInvoices. Create professional invoices and get paid faster.",
-    images: ["/adtrategic-logo-blanco.png"],
+    images: ["/addinvoices.png"],
   },
 };
 
