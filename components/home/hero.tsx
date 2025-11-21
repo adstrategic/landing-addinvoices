@@ -52,7 +52,6 @@ export default function Hero() {
                 <strong>AddInvoices</strong>
               </h1>
             </motion.div>
-
             {/* Description */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
