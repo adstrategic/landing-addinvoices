@@ -234,6 +234,7 @@ export default function Home() {
 
       {/* Sections */}
       <SponsorsSlider />
+
       <WhyChoose />
       <div id="waitlist">
         <WaitlistSection />

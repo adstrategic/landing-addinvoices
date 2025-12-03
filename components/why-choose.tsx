@@ -29,6 +29,9 @@ const highlights = [
 export function WhyChoose() {
   return (
     <section className="relative py-24 px-4 overflow-hidden">
+      <div className="bg-primary absolute -top-10 left-1/2 h-16 w-44 -translate-x-1/2 rounded-full opacity-40 blur-3xl select-none" />
+      <div className="via-primary/50 absolute top-0 left-1/2 h-px w-3/5 -translate-x-1/2 bg-gradient-to-r from-transparent to-transparent transition-all ease-in-out" />
+
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -45,7 +48,9 @@ export function WhyChoose() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-6"
           >
             <Sparkles className="w-4 h-4 text-[#2563eb]" />
-            <span className="text-sm font-medium text-white/80">Why Choose Us</span>
+            <span className="text-sm font-medium text-white/80">
+              Why Choose Us
+            </span>
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-white to-white/60 bg-clip-text text-transparent mb-4">
@@ -54,7 +59,10 @@ export function WhyChoose() {
 
           <p className="text-lg text-white/60 max-w-2xl mx-auto">
             AddInvoices helps you sell, collect, and grow — powered by{" "}
-            <strong className="text-white">AI and intelligent automation</strong>.
+            <strong className="text-white">
+              AI and intelligent automation
+            </strong>
+            .
           </p>
         </motion.div>
 
@@ -73,9 +81,7 @@ export function WhyChoose() {
               <h3 className="text-xl font-semibold text-white mb-2">
                 {highlight.title}
               </h3>
-              <p className="text-white/60 text-sm">
-                {highlight.description}
-              </p>
+              <p className="text-white/60 text-sm">{highlight.description}</p>
             </motion.div>
           ))}
         </div>
@@ -83,4 +89,3 @@ export function WhyChoose() {
     </section>
   );
 }
-
