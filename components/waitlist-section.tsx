@@ -68,11 +68,11 @@ export function WaitlistSection() {
           className="text-center"
         >
           <h2 className="text-4xl md:text-7xl font-bold text-white mb-4">
-            AddInvoices
+            ADDINVOICES
           </h2>
           <p className="text-lg text-ad-secondary mb-8 max-w-2xl mx-auto">
             Be the first to know when we launch, get early access to discounts,
-            new features and exclusive offers for AddInvoices.
+            new features and exclusive offers for ADDINVOICES.
           </p>
 
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">
@@ -81,7 +81,7 @@ export function WaitlistSection() {
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                 <Input
                   type="email"
-                  placeholder="tu@email.com"
+                  placeholder="your@email.com"
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -101,15 +101,15 @@ export function WaitlistSection() {
                 {isLoading ? (
                   <>
                     <Loader2 className="w-4 h-4 animate-spin" />
-                    Enviando...
+                    Sending...
                   </>
                 ) : isSuccess ? (
                   <>
                     <CheckCircle2 className="w-4 h-4" />
-                    ¡Listo!
+                    Ready!
                   </>
                 ) : (
-                  "Unirse"
+                  "Join"
                 )}
               </Button>
             </div>
@@ -132,9 +132,7 @@ export function WaitlistSection() {
                 className="mt-4 flex items-center gap-2 text-green-400 text-sm justify-center"
               >
                 <CheckCircle2 className="w-4 h-4" />
-                <span>
-                  ¡Gracias! Te hemos enviado un correo de confirmación.
-                </span>
+                <span>Thank you! We have sent you a confirmation email.</span>
               </motion.div>
             )}
           </form>
