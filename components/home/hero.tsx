@@ -83,7 +83,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.5 }}
               className="mt-6 text-sm text-muted-foreground text-center"
             >
-              AddInvoices — Smart invoicing software by AdStrategic.
+              AddInvoices — Smart invoicing software by ADDSTRATEGIC.
             </motion.p>
 
             <motion.div
