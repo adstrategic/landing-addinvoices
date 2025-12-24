@@ -24,14 +24,14 @@ export async function POST(request: NextRequest) {
 
     const { data, error } = await resend.batch.send([
       {
-        from: "AddInvoicesAI <sales@news.addinvoicesia.com>",
+        from: "AddInvoicesAI <sales@news.addinvoicesai.com>",
         to: [email],
         subject: "Thank you for joining the AddInvoicesAI waitlist!",
         react: WelcomeEmail(),
       },
 
       {
-        from: "AddInvoicesAI Website <sales@news.addinvoicesia.com>",
+        from: "AddInvoicesAI Website <sales@news.addinvoicesai.com>",
         to: ["addinvoicesia@gmail.com"],
         subject: "New client has joined the AddInvoicesAI waitlist",
         react: NewUser({ email }),
