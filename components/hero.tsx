@@ -169,7 +169,12 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, delay: 0.4 }}
         >
-          <Link prefetch={false} href="https://adstrategic.org/" target="_blank" rel="noopener noreferrer">
+          <Link
+            prefetch={false}
+            href="https://addstrategic.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button className="bg-gradient-to-b from-rose-500 to-rose-700 text-sm text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]">
               Get started
             </Button>

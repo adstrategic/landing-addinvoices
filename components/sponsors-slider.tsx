@@ -45,7 +45,7 @@ export function SponsorsSlider() {
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Companies that trust ADSTRATEGIC
+            Companies that trust ADDSTRATEGIC
           </h2>
           <p className="text-ad-secondary text-lg">
             Join the leading companies already using our AI

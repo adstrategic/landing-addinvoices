@@ -8,13 +8,13 @@ export function ConventionalFooter() {
           {/* Middle column - Logo placeholder (elevated) */}
           <div className="text-center transform -translate-y-4 md:-translate-y-6 relative z-10 flex flex-col items-center">
             <a
-              href="https://adstrategic.org/"
+              href="https://addstrategic.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                src="/adstrategic-text-logo.png"
-                alt="ADSTRATEGIC Logo"
+                src="/addstrategic_banner.png"
+                alt="ADDSTRATEGIC Logo"
                 className="w-64 md:w-96 h-auto mb-4 object-contain hover:scale-105 transition-all duration-300 translate-y-12 md:translate-y-16 cursor-pointer"
               />
             </a>
@@ -59,7 +59,7 @@ export function ConventionalFooter() {
             <Facebook className="w-6 h-6" />
           </a>
           <a
-            href="https://www.instagram.com/adstrategic.agency/"
+            href="https://www.instagram.com/addstrategic/"
             target="_blank"
             rel="noopener noreferrer"
             className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors duration-200"
@@ -70,7 +70,7 @@ export function ConventionalFooter() {
         </div>
 
         <div className="text-center text-gray-400 text-sm border-t border-gray-700 pt-8">
-          © 2025 AddInvoices — Powered by AdStrategic |{" "}
+          © 2025 AddInvoices — Powered by ADDSTRATEGIC |{" "}
           <a href="#" className="hover:text-white transition-colors">
             Privacy Policy
           </a>{" "}

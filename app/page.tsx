@@ -89,7 +89,7 @@ export default function Home() {
         >
           <img
             src="/adtrategic-logo-blanco.png"
-            alt="Adstrategic Logo"
+            alt="ADDSTRATEGIC Logo"
             className="h-8 w-auto md:h-10"
             draggable={false}
             style={{
@@ -146,8 +146,8 @@ export default function Home() {
       <header className="sticky top-4 z-[9999] mx-4 flex w-auto flex-row items-center justify-between rounded-full bg-ad-navbar/80 md:hidden px-4 py-3">
         <a className="flex items-center justify-center gap-2" href="/">
           <img
-            src="/adtrategic-logo-blanco.png"
-            alt="Adstrategic Logo"
+            src="/addstrategic_banner.png"
+            alt="ADDSTRATEGIC Logo"
             className="h-7 w-auto md:h-8"
             draggable={false}
             style={{

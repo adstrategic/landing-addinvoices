@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   description:
     "Streamline your billing with AddInvoices. The smart, easy-to-use invoicing software designed for freelancers and small businesses. Create professional invoices, track payments, and get paid faster.",
   keywords:
-    "invoicing software, invoice maker, online billing app, freelance invoicing, small business invoicing, invoice management system, AddInvoices, AdStrategic, smart invoicing",
-  generator: "AdStrategic",
+    "invoicing software, invoice maker, online billing app, freelance invoicing, small business invoicing, invoice management system, AddInvoices, ADDSTRATEGIC, smart invoicing",
+  generator: "ADDSTRATEGIC",
   applicationName: "AddInvoices",
   authors: [
     {
