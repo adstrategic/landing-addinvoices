@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     },
   ],
   icons: {
-    icon: "/adtrategic-logo-blanco.png",
-    shortcut: "/adtrategic-logo-blanco.png",
-    apple: "/adtrategic-logo-blanco.png",
+    icon: "/addstrategic-logo-blanco.png",
+    shortcut: "/addstrategic-logo-blanco.png",
+    apple: "/addstrategic-logo-blanco.png",
   },
   openGraph: {
     title:
