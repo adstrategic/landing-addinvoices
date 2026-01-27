@@ -6,6 +6,20 @@ export default function Hero() {
   return (
     <>
       <section className="relative overflow-hidden min-h-screen flex flex-col">
+        {/* Background Image - Only visible on lg and above */}
+        <div
+          className="hidden lg:block lg:bg-contain -mx-32 absolute inset-0 z-0 bg-center bg-no-repeat "
+          style={{
+            backgroundImage: "url(/addinvoices_bg.png)",
+          }}
+        />
+        <div
+          className="block lg:hidden absolute inset-0 z-0 bg-center bg-no-repeat "
+          style={{
+            backgroundImage: "url(/waves.png)",
+          }}
+        />
+
         <div className="container mx-auto px-4 py-24 sm:py-32 relative z-10 flex-1 flex flex-col">
           <div className="mx-auto max-w-4xl text-center flex-1 flex flex-col justify-center">
             {/* Badge */}
