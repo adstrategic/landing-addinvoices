@@ -133,7 +133,7 @@ export default function Home() {
         {/* Desktop Login / Sign Up */}
         <div className="flex items-center gap-4">
           <a
-            href="#waitlist"
+            href="https://app.addinvoicesai.com/"
             rel="noopener noreferrer"
             className="rounded-md font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center btn-ad-primary shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] px-4 py-2 text-sm"
           >
@@ -215,8 +215,7 @@ export default function Home() {
                 </button>
                 <div className="border-t border-border/50 pt-6 flex flex-col space-y-4">
                   <a
-                    href="#waitlist"
-                    target="_blank"
+                    href="https://app.addinvoicesai.com/"
                     rel="noopener noreferrer"
                     className="px-4 py-4 text-xl font-bold text-center btn-ad-primary rounded-xl shadow-lg hover:-translate-y-0.5 transition-all duration-200"
                   >

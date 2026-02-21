@@ -1,12 +1,16 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Check, Sparkles } from "lucide-react";
 
-const pricingPlans = [
+const APP_URL = "https://app.addinvoicesai.com/";
+
+const subscriptionPlans = [
   {
-    name: "Basic",
-    monthlyPrice: 11.99,
+    name: "Core",
+    monthlyPrice: 12,
+    yearlyPrice: 120,
     description: "Perfect for freelancers & small teams",
     features: [
       "Unlimited invoices",
@@ -18,42 +22,44 @@ const pricingPlans = [
       "Invoice tracking (draft, sent, paid)",
     ],
     popular: false,
-    cta: "Start Free Trial",
+    cta: "Get Core",
   },
   {
-    name: "Pro",
-    monthlyPrice: 19.99,
+    name: "AI Pro",
+    monthlyPrice: 20,
+    yearlyPrice: 179.99,
     description: "For companies & teams",
     features: [
-      "Everything in Basic",
+      "Everything in Core",
       "Automated workflows with AI",
       "AI assistant to manage invoices, clients, expenses, and more",
       "Voice generation for invoices, clients, expenses, and more",
-
       "Premium templates",
     ],
     popular: true,
-    cta: "Get Pro Access",
-  },
-  {
-    name: "Lifetime",
-    monthlyPrice: 100,
-    description: "One-time payment for lifetime access",
-    highlight: "Only for first 100 users!",
-    features: [
-      "Everything in Pro",
-      "Faster updates",
-      "Priority support",
-      "Early access to new features",
-      "Lifetime updates",
-      "No monthly fees",
-    ],
-    popular: false,
-    cta: "Get Lifetime Access",
+    cta: "Get AI Pro",
   },
 ];
 
+const lifetimePlan = {
+  name: "Lifetime",
+  price: 100,
+  description: "One-time payment for lifetime access",
+  highlight: "Only for first 100 users!",
+  features: [
+    "Everything in AI Pro",
+    "Faster updates",
+    "Priority support",
+    "Early access to new features",
+    "Lifetime updates",
+    "No monthly fees",
+  ],
+  cta: "Get Lifetime Access",
+};
+
 export function PricingSection() {
+  const [isYearly, setIsYearly] = useState(false);
+
   return (
     <section className="relative py-24 px-4">
       <div className="max-w-7xl mx-auto">
@@ -84,74 +90,150 @@ export function PricingSection() {
             AddInvoices adapts to your business — whether you're a freelancer or
             a growing company.
           </p>
+
+          {/* Monthly / Yearly Toggle */}
+          <div className="inline-flex items-center rounded-full bg-white/5 border border-white/10 p-1 mb-4">
+            <button
+              type="button"
+              onClick={() => setIsYearly(false)}
+              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
+                !isYearly
+                  ? "bg-[#2563eb] text-white shadow-lg"
+                  : "text-white/70 hover:text-white"
+              }`}
+            >
+              Monthly
+            </button>
+            <button
+              type="button"
+              onClick={() => setIsYearly(true)}
+              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
+                isYearly
+                  ? "bg-[#2563eb] text-white shadow-lg"
+                  : "text-white/70 hover:text-white"
+              }`}
+            >
+              Yearly
+            </button>
+          </div>
         </motion.div>
 
         {/* Pricing Cards */}
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {pricingPlans.map((plan, index) => (
-            <motion.div
-              key={plan.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
-              className={`relative rounded-2xl p-8 backdrop-blur-sm border transition-all duration-300 ${
-                plan.popular
-                  ? "bg-gradient-to-b from-[#2563eb]/10 to-transparent border-[#2563eb]/30 shadow-lg shadow-[#2563eb]/10"
-                  : "bg-white/5 border-white/10 hover:border-white/20"
-              }`}
-            >
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-[#2563eb] to-[#3b82f6] text-white text-sm font-medium px-4 py-2 rounded-full">
-                    Most Popular
-                  </div>
-                </div>
-              )}
-
-              <div className="text-center mb-8">
-                <h3 className="text-xl font-bold text-white mb-2">
-                  {plan.name}
-                </h3>
-                <div className="flex items-baseline justify-center gap-1 mb-2">
-                  <span className="text-4xl font-bold text-white">
-                    ${plan.monthlyPrice}
-                  </span>
-                  <span className="text-white/60 text-lg">
-                    {plan.name === "Lifetime" ? "/one-time" : "/month"}
-                  </span>
-                </div>
-                <p className="text-white/60 text-sm">{plan.description}</p>
-                {plan.highlight && (
-                  <p className="text-white/60 text-sm font-bold">
-                    {plan.highlight}
-                  </p>
-                )}
-              </div>
-
-              <ul className="space-y-4 mb-8">
-                {plan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-[#2563eb] flex-shrink-0" />
-                    <span className="text-white/80 text-sm">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 ${
+          {subscriptionPlans.map((plan, index) => {
+            const price = isYearly ? plan.yearlyPrice : plan.monthlyPrice;
+            const period = isYearly ? "year" : "month";
+            return (
+              <motion.div
+                key={plan.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
+                className={`relative rounded-2xl p-8 backdrop-blur-sm border transition-all duration-300 ${
                   plan.popular
-                    ? "bg-gradient-to-r from-[#2563eb] to-[#3b82f6] text-white shadow-lg shadow-[#2563eb]/25 hover:shadow-[#2563eb]/40"
-                    : "bg-white/10 text-white border border-white/20 hover:bg-white/20"
+                    ? "bg-gradient-to-b from-[#2563eb]/10 to-transparent border-[#2563eb]/30 shadow-lg shadow-[#2563eb]/10"
+                    : "bg-white/5 border-white/10 hover:border-white/20"
                 }`}
               >
-                {plan.cta}
-              </motion.button>
-            </motion.div>
-          ))}
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-[#2563eb] to-[#3b82f6] text-white text-sm font-medium px-4 py-2 rounded-full">
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+
+                <div className="text-center mb-8">
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    {plan.name}
+                  </h3>
+                  <div className="flex items-baseline justify-center gap-1 mb-2">
+                    <span className="text-4xl font-bold text-white">
+                      ${typeof price === "number" && price % 1 !== 0 ? price.toFixed(2) : price}
+                    </span>
+                    <span className="text-white/60 text-lg">
+                      /{period}
+                    </span>
+                  </div>
+                  <p className="text-white/60 text-sm">{plan.description}</p>
+                </div>
+
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center gap-3">
+                      <Check className="w-5 h-5 text-[#2563eb] flex-shrink-0" />
+                      <span className="text-white/80 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <motion.a
+                  href={APP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className={`block w-full py-3 px-6 rounded-lg font-medium text-center transition-all duration-200 ${
+                    plan.popular
+                      ? "bg-gradient-to-r from-[#2563eb] to-[#3b82f6] text-white shadow-lg shadow-[#2563eb]/25 hover:shadow-[#2563eb]/40"
+                      : "bg-white/10 text-white border border-white/20 hover:bg-white/20"
+                  }`}
+                >
+                  {plan.cta}
+                </motion.a>
+              </motion.div>
+            );
+          })}
+
+          {/* Lifetime plan */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            whileHover={{ y: -5 }}
+            className="relative rounded-2xl p-8 backdrop-blur-sm border bg-white/5 border-white/10 hover:border-white/20 transition-all duration-300"
+          >
+            <div className="text-center mb-8">
+              <h3 className="text-xl font-bold text-white mb-2">
+                {lifetimePlan.name}
+              </h3>
+              <div className="flex items-baseline justify-center gap-1 mb-2">
+                <span className="text-4xl font-bold text-white">
+                  ${lifetimePlan.price}
+                </span>
+                <span className="text-white/60 text-lg">/one-time</span>
+              </div>
+              <p className="text-white/60 text-sm">{lifetimePlan.description}</p>
+              {lifetimePlan.highlight && (
+                <p className="text-white/60 text-sm font-bold mt-1">
+                  {lifetimePlan.highlight}
+                </p>
+              )}
+            </div>
+
+            <ul className="space-y-4 mb-8">
+              {lifetimePlan.features.map((feature, featureIndex) => (
+                <li key={featureIndex} className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-[#2563eb] flex-shrink-0" />
+                  <span className="text-white/80 text-sm">{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <motion.a
+              href={APP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="block w-full py-3 px-6 rounded-lg font-medium text-center bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all duration-200"
+            >
+              {lifetimePlan.cta}
+            </motion.a>
+          </motion.div>
         </div>
 
         {/* Bottom CTA */}
@@ -163,12 +245,14 @@ export function PricingSection() {
           className="text-center mt-16"
         >
           <motion.a
-            href="#waitlist"
+            href={APP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-block text-[#2563eb] hover:text-[#3b82f6] font-medium transition-colors"
           >
-            Join the Waitlist →
+            Join the app →
           </motion.a>
         </motion.div>
       </div>
