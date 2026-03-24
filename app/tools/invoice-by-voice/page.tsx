@@ -151,7 +151,7 @@ export default function InvoiceByVoicePage() {
         onLoad={() => setIsJSPDFLoaded(true)}
       />
 
-      <main className="relative z-10 pt-28 pb-20 px-4 md:px-6 max-w-6xl mx-auto">
+      <main className="relative z-10 pt-28 pb-48 md:pb-20 px-4 md:px-6 max-w-6xl mx-auto">
         {/* Breadcrumb */}
         <nav className="flex items-center space-x-2 text-xs md:text-sm text-ad-secondary mb-8 text-center justify-center lg:justify-start">
           <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -289,7 +289,25 @@ export default function InvoiceByVoicePage() {
                  </div>
               </div>
            </div>
+        </div>
 
+        {/* Mobile Actions (Sticky Bottom) */}
+        <div className="fixed bottom-0 left-0 right-0 p-4 bg-[#0a0a0a]/80 backdrop-blur-xl border-t border-white/10 z-[100] flex lg:hidden gap-3 px-6 pb-8 md:pb-6 shadow-2xl animate-in fade-in slide-in-from-bottom duration-500">
+           <button 
+              onClick={handleGenerate}
+              className="flex-1 py-3.5 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-xl font-bold flex items-center justify-center transition-all text-xs active:scale-95 [color-scheme:dark]"
+           >
+             <Send className="w-4 h-4 mr-2 text-blue-400" />
+             Generate
+           </button>
+           <button 
+              onClick={() => setIsModalOpen(true)}
+              disabled={!isJSPDFLoaded}
+              className="flex-1 py-3.5 btn-ad-primary rounded-xl font-bold flex items-center justify-center shadow-lg transition-all disabled:opacity-50 text-xs active:scale-95"
+           >
+             <Download className="w-4 h-4 mr-2" />
+             Download
+           </button>
         </div>
 
         {/* Comparison Section */}

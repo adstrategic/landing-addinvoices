@@ -74,7 +74,7 @@ export default function ContractGeneratorPage() {
         onLoad={() => setIsJSPDFLoaded(true)}
       />
 
-      <main className="relative z-10 pt-28 pb-20 px-4 md:px-6 max-w-6xl mx-auto">
+      <main className="relative z-10 pt-28 pb-48 md:pb-20 px-4 md:px-6 max-w-6xl mx-auto">
         {/* Breadcrumb */}
         <nav className="flex items-center space-x-2 text-xs md:text-sm text-ad-secondary mb-8">
           <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -242,6 +242,18 @@ export default function ContractGeneratorPage() {
                  </div>
               </div>
            </div>
+        </div>
+
+        {/* Mobile Actions (Sticky Bottom) */}
+        <div className="fixed bottom-0 left-0 right-0 p-4 bg-[#0a0a0a]/80 backdrop-blur-xl border-t border-white/10 z-[100] flex lg:hidden gap-3 px-6 pb-8 md:pb-6 shadow-2xl animate-in fade-in slide-in-from-bottom duration-500">
+           <button 
+              onClick={() => setIsModalOpen(true)}
+              disabled={!isJSPDFLoaded}
+              className="w-full py-4 btn-ad-primary rounded-xl font-bold flex items-center justify-center shadow-lg transition-all disabled:opacity-50 text-sm active:scale-95 text-white"
+           >
+             <Download className="w-5 h-5 mr-3" />
+             Download Contract PDF
+           </button>
         </div>
 
         {/* Disclaimer */}
