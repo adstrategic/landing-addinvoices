@@ -1,0 +1,256 @@
+"use client";
+
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Check, Sparkles } from "lucide-react";
+
+const APP_URL = "https://app.addinvoicesai.com/";
+
+export type SubscriptionPlanCopy = {
+  name: string;
+  monthlyPrice: number;
+  yearlyPrice: number;
+  description: string;
+  features: string[];
+  popular: boolean;
+  cta: string;
+};
+
+export type LifetimePlanCopy = {
+  name: string;
+  price: number;
+  description: string;
+  highlight: string;
+  features: string[];
+  cta: string;
+};
+
+export type PricingSectionProps = {
+  badge: string;
+  title: string;
+  subtitle: string;
+  monthly: string;
+  yearly: string;
+  mostPopular: string;
+  periodMonth: string;
+  periodYear: string;
+  periodOneTime: string;
+  bottomCta: string;
+  subscriptionPlans: SubscriptionPlanCopy[];
+  lifetimePlan: LifetimePlanCopy;
+};
+
+export function PricingSection({
+  badge,
+  title,
+  subtitle,
+  monthly,
+  yearly,
+  mostPopular,
+  periodMonth,
+  periodYear,
+  periodOneTime,
+  bottomCta,
+  subscriptionPlans,
+  lifetimePlan,
+}: PricingSectionProps) {
+  const [isYearly, setIsYearly] = useState(false);
+
+  return (
+    <section className="relative py-24 px-4">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-6"
+          >
+            <Sparkles className="w-4 h-4 text-[#2563eb]" />
+            <span className="text-sm font-medium text-white/80">{badge}</span>
+          </motion.div>
+
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-white to-white/60 bg-clip-text text-transparent mb-4">
+            {title}
+          </h2>
+
+          <p className="text-lg text-white/60 max-w-2xl mx-auto mb-8">
+            {subtitle}
+          </p>
+
+          <div className="inline-flex items-center rounded-full bg-white/5 border border-white/10 p-1 mb-4">
+            <button
+              type="button"
+              onClick={() => setIsYearly(false)}
+              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
+                !isYearly
+                  ? "bg-[#2563eb] text-white shadow-lg"
+                  : "text-white/70 hover:text-white"
+              }`}
+            >
+              {monthly}
+            </button>
+            <button
+              type="button"
+              onClick={() => setIsYearly(true)}
+              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
+                isYearly
+                  ? "bg-[#2563eb] text-white shadow-lg"
+                  : "text-white/70 hover:text-white"
+              }`}
+            >
+              {yearly}
+            </button>
+          </div>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {subscriptionPlans.map((plan, index) => {
+            const price = isYearly ? plan.yearlyPrice : plan.monthlyPrice;
+            const period = isYearly ? periodYear : periodMonth;
+            return (
+              <motion.div
+                key={plan.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
+                className={`relative rounded-2xl p-8 backdrop-blur-sm border transition-all duration-300 ${
+                  plan.popular
+                    ? "bg-gradient-to-b from-[#2563eb]/10 to-transparent border-[#2563eb]/30 shadow-lg shadow-[#2563eb]/10"
+                    : "bg-white/5 border-white/10 hover:border-white/20"
+                }`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-[#2563eb] to-[#3b82f6] text-white text-sm font-medium px-4 py-2 rounded-full">
+                      {mostPopular}
+                    </div>
+                  </div>
+                )}
+
+                <div className="text-center mb-8">
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    {plan.name}
+                  </h3>
+                  <div className="flex items-baseline justify-center gap-1 mb-2">
+                    <span className="text-4xl font-bold text-white">
+                      $
+                      {typeof price === "number" && price % 1 !== 0
+                        ? price.toFixed(2)
+                        : price}
+                    </span>
+                    <span className="text-white/60 text-lg">/{period}</span>
+                  </div>
+                  <p className="text-white/60 text-sm">{plan.description}</p>
+                </div>
+
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center gap-3">
+                      <Check className="w-5 h-5 text-[#2563eb] flex-shrink-0" />
+                      <span className="text-white/80 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <motion.a
+                  href={APP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className={`block w-full py-3 px-6 rounded-lg font-medium text-center transition-all duration-200 ${
+                    plan.popular
+                      ? "bg-gradient-to-r from-[#2563eb] to-[#3b82f6] text-white shadow-lg shadow-[#2563eb]/25 hover:shadow-[#2563eb]/40"
+                      : "bg-white/10 text-white border border-white/20 hover:bg-white/20"
+                  }`}
+                >
+                  {plan.cta}
+                </motion.a>
+              </motion.div>
+            );
+          })}
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            whileHover={{ y: -5 }}
+            className="relative rounded-2xl p-8 backdrop-blur-sm border bg-white/5 border-white/10 hover:border-white/20 transition-all duration-300"
+          >
+            <div className="text-center mb-8">
+              <h3 className="text-xl font-bold text-white mb-2">
+                {lifetimePlan.name}
+              </h3>
+              <div className="flex items-baseline justify-center gap-1 mb-2">
+                <span className="text-4xl font-bold text-white">
+                  ${lifetimePlan.price}
+                </span>
+                <span className="text-white/60 text-lg">
+                  /{periodOneTime}
+                </span>
+              </div>
+              <p className="text-white/60 text-sm">
+                {lifetimePlan.description}
+              </p>
+              {lifetimePlan.highlight && (
+                <p className="text-white/60 text-sm font-bold mt-1">
+                  {lifetimePlan.highlight}
+                </p>
+              )}
+            </div>
+
+            <ul className="space-y-4 mb-8">
+              {lifetimePlan.features.map((feature, featureIndex) => (
+                <li key={featureIndex} className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-[#2563eb] flex-shrink-0" />
+                  <span className="text-white/80 text-sm">{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <motion.a
+              href={APP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="block w-full py-3 px-6 rounded-lg font-medium text-center bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all duration-200"
+            >
+              {lifetimePlan.cta}
+            </motion.a>
+          </motion.div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center mt-16"
+        >
+          <motion.a
+            href={APP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-block text-[#2563eb] hover:text-[#3b82f6] font-medium transition-colors"
+          >
+            {bottomCta}
+          </motion.a>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

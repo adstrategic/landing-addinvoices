@@ -1,0 +1,376 @@
+{
+  "Metadata": {
+    "title": "ADDINVOICES - Smart Invoicing Software",
+    "description": "Streamline your billing with ADDINVOICES. The smart, easy-to-use invoicing software designed for growing businesses. Create professional invoices, track payments, and get paid faster.",
+    "keywords": "invoicing software, invoice maker, online billing app, invoicing for growing businesses, invoice management system, ADDINVOICES, ADDSTRATEGIC, smart invoicing",
+    "imageAlt": "Banner ADDINVOICES",
+    "twitterTitle": "ADDINVOICES - Smart Invoicing Software",
+    "twitterDescription": "Streamline your billing with ADDINVOICES. Create professional invoices and get paid faster."
+  },
+  "Homepage": {
+    "Navbar": {
+      "logoAlt": "ADDSTRATEGIC Logo",
+      "brandShort": "ADDINV.",
+      "join": "Join",
+      "toggleMenu": "Toggle menu",
+      "language": {
+        "toggleAriaLabel": "Change language",
+        "en": "English",
+        "es": "Spanish"
+      },
+      "links": {
+        "features": "Features",
+        "tools": "Tools",
+        "pricing": "Pricing",
+        "blog": "Blog",
+        "faq": "FAQ"
+      }
+    },
+    "Hero": {
+      "badge": "Smart Invoicing Software",
+      "title": "Create, send, and manage your invoices in minutes with <brand>ADDINVOICES AI</brand>",
+      "description": "The smart invoicing app built for freelancers, small businesses, and growing companies. Create professional invoices, get paid faster, and automate your workflow with an <emphasis>AI assistant</emphasis> that does the heavy lifting for you.",
+      "ctaEarlyAccess": "Get early access",
+      "ctaPricing": "View Pricing",
+      "seoTagline": "ADDINVOICES — Smart invoicing software by ADDSTRATEGIC.",
+      "googlePlayAlt": "Get it on Google Play",
+      "appStoreAlt": "Download on the App Store"
+    },
+    "Sponsors": {
+      "title": "Companies that trust ADDSTRATEGIC",
+      "subtitle": "Join the leading companies already using our AI",
+      "logoAlt": "Partner logo"
+    },
+    "WhyChoose": {
+      "badge": "Why Choose Us",
+      "title": "More than just an invoice maker",
+      "subtitle": "ADDINVOICES helps you sell, collect, and grow — powered by <bold>AI and intelligent automation</bold>.",
+      "highlights": [
+        {
+          "icon": "mic",
+          "title": "Invoice by Voice",
+          "description": "Create invoices using your voice for ultimate convenience."
+        },
+        {
+          "icon": "bell",
+          "title": "Smart Reminders",
+          "description": "Automated payment reminders and intelligent follow-ups."
+        },
+        {
+          "icon": "trending",
+          "title": "AI-Driven Insights",
+          "description": "Get intelligent insights about your business performance."
+        },
+        {
+          "icon": "palette",
+          "title": "Branded Templates",
+          "description": "Custom templates that match your company identity."
+        }
+      ]
+    },
+    "Waitlist": {
+      "title": "ADDINVOICES",
+      "description": "WE JUST LAUNCHED! Get early access to discounts, new features and exclusive offers for ADDINVOICES.",
+      "cta": "Join"
+    },
+    "Features": {
+      "title": "Everything you need to invoice like a pro",
+      "subtitle": "From creating branded invoices to tracking payments online. ADDINVOICES combines automation, design, and control in one simple platform.",
+      "scrambleText": "worldwide pay",
+      "cards": [
+        {
+          "title": "💸 Smart Invoicing",
+          "body": "Create and send invoices in seconds with custom templates, logos, and digital signatures.",
+          "image": "/feature4.png",
+          "imageAlt": "Smart Invoicing"
+        },
+        {
+          "title": "📩 Integrated Payments",
+          "body": "Accept Stripe or PayPal payments directly from your invoice.",
+          "image": "",
+          "imageAlt": "Integrated payments"
+        },
+        {
+          "title": "📊 Dashboard Insights",
+          "body": "View income, expenses, and pending invoices in real time.",
+          "image": "/feature1.jpg",
+          "imageAlt": "Dashboard Insights"
+        },
+        {
+          "title": "🚀 Automated Workflow",
+          "body": "Automatic payment reminders, client management, and organized invoice tracking (draft, sent, paid).",
+          "image": "/feature3.png",
+          "imageAlt": "Automated Workflow"
+        }
+      ]
+    },
+    "Pricing": {
+      "badge": "Pricing",
+      "title": "Simple plans with no hidden fees",
+      "subtitle": "ADDINVOICES adapts to your business — whether you are a freelancer or a growing company.",
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "mostPopular": "Most Popular",
+      "periodMonth": "month",
+      "periodYear": "year",
+      "periodOneTime": "one-time",
+      "bottomCta": "Join the app →",
+      "subscriptionPlans": [
+        {
+          "name": "Core",
+          "monthlyPrice": 12,
+          "yearlyPrice": 120,
+          "description": "Perfect for freelancers & small teams",
+          "popular": false,
+          "cta": "Get Core",
+          "features": [
+            "Unlimited invoices",
+            "Online payments (Stripe, PayPal)",
+            "Payment reminders",
+            "Custom templates",
+            "Web & mobile access",
+            "Client management",
+            "Invoice tracking (draft, sent, paid)"
+          ]
+        },
+        {
+          "name": "AI Pro",
+          "monthlyPrice": 20,
+          "yearlyPrice": 179.99,
+          "description": "For companies & teams",
+          "popular": true,
+          "cta": "Get AI Pro",
+          "features": [
+            "Everything in Core",
+            "Automated workflows with AI",
+            "AI assistant to manage invoices, clients, expenses, and more",
+            "Voice generation for invoices, clients, expenses, and more",
+            "Premium templates"
+          ]
+        }
+      ],
+      "lifetimePlan": {
+        "name": "Lifetime",
+        "price": 100,
+        "description": "One-time payment for lifetime access",
+        "highlight": "Only for first 100 users!",
+        "cta": "Get Lifetime Access",
+        "features": [
+          "Everything in AI Pro",
+          "Faster updates",
+          "Priority support",
+          "Early access to new features",
+          "Lifetime updates",
+          "No monthly fees"
+        ]
+      }
+    },
+    "NewRelease": {
+      "title": "Start invoicing like a professional today",
+      "description": "Create your free account, customize your invoices, and get paid faster with ADDINVOICES.",
+      "cta": "Get Started",
+      "wordmark": "ADDINVOICES"
+    },
+    "FAQSection": {
+      "pill": "Frequently Asked Questions",
+      "title": "Questions? We have <highlight>answers</highlight>",
+      "items": [
+        {
+          "question": "What is ADDINVOICES?",
+          "answer": "ADDINVOICES is a smart invoicing software designed for freelancers, small businesses, and growing companies. It helps you create professional invoices, manage clients, track payments, and automate your billing workflow."
+        },
+        {
+          "question": "How does the free trial work?",
+          "answer": "You can start a free 7-day trial with full access to all features. No credit card required. After the trial, choose between our Core ($12/month) or AI Pro ($20/month) plans."
+        },
+        {
+          "question": "Can I accept online payments?",
+          "answer": "Yes! The AI Pro plan includes integrated payment processing with Stripe and PayPal, allowing your clients to pay directly from the invoice."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Absolutely. ADDINVOICES uses enterprise-level encryption and follows industry security standards. Your invoices and client data are protected with the highest security measures."
+        },
+        {
+          "question": "Can I use ADDINVOICES on mobile?",
+          "answer": "Yes! ADDINVOICES is available as a Progressive Web App (PWA), so you can create and manage invoices from any device, including smartphones and tablets."
+        },
+        {
+          "question": "What payment methods are supported?",
+          "answer": "ADDINVOICES supports Stripe and PayPal for online payments. We are also working on additional payment gateway integrations."
+        }
+      ]
+    },
+    "Testimonials": {
+      "pill": "Testimonials",
+      "title": "What our users say",
+      "subtitle": "Join thousands of freelancers and businesses using ADDINVOICES to get paid faster and manage their invoicing effortlessly.",
+      "shareCta": "Share your experience",
+      "items": [
+        {
+          "name": "Carlos R.",
+          "username": "Web Designer",
+          "body": "Since using ADDINVOICES, I get paid 3x faster.",
+          "img": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Marta G.",
+          "username": "Entrepreneur",
+          "body": "I can create and send an invoice from my phone in under 2 minutes.",
+          "img": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "David Chen",
+          "username": "Freelance Developer",
+          "body": "ADDINVOICES has streamlined my entire billing process. No more chasing payments!",
+          "img": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Sarah Johnson",
+          "username": "Small Business Owner",
+          "body": "The dashboard gives me real-time insights into my cash flow. Game changer!",
+          "img": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Michael Torres",
+          "username": "Consultant",
+          "body": "Professional invoices that match my brand. Clients love the payment links.",
+          "img": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Emma Wilson",
+          "username": "Design Agency",
+          "body": "Automated reminders mean I never have to follow up manually. Time saved!",
+          "img": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "James Anderson",
+          "username": "Marketing Consultant",
+          "body": "The mobile app is perfect for creating invoices on the go. Highly recommend!",
+          "img": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Lisa Park",
+          "username": "Creative Director",
+          "body": "Client management and invoice tracking in one place. Exactly what I needed.",
+          "img": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Robert Kim",
+          "username": "IT Services",
+          "body": "Online payments integrated seamlessly. My clients pay faster now.",
+          "img": "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Amanda Lee",
+          "username": "Photographer",
+          "body": "Beautiful templates that make my invoices look professional. Love it!",
+          "img": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Thomas Brown",
+          "username": "Architect",
+          "body": "The expense tracking feature helps me stay organized. Great tool!",
+          "img": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Rachel Green",
+          "username": "Content Creator",
+          "body": "Simple, fast, and reliable. ADDINVOICES has made invoicing effortless.",
+          "img": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Daniel White",
+          "username": "Business Coach",
+          "body": "The analytics dashboard shows me exactly where my revenue comes from.",
+          "img": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Olivia Martinez",
+          "username": "Event Planner",
+          "body": "Multiple clients, multiple invoices, all organized perfectly. Thank you!",
+          "img": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Chris Taylor",
+          "username": "Software Developer",
+          "body": "Best invoicing app I have used. Clean interface and powerful features.",
+          "img": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face"
+        }
+      ]
+    },
+    "Footer": {
+      "bannerAlt": "ADDSTRATEGIC Logo",
+      "links": {
+        "features": "Features",
+        "pricing": "Pricing",
+        "testimonials": "Testimonials",
+        "faq": "FAQ"
+      },
+      "facebookLabel": "Facebook",
+      "instagramLabel": "Instagram",
+      "copyright": "© 2025 ADDINVOICES — Powered by ADDSTRATEGIC |",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "Blog": {
+    "Metadata": {
+      "title": "ADDINVOICES Blog",
+      "description": "Smart invoicing tips, product updates, and guides for growing businesses using ADDINVOICES."
+    },
+    "title": "Welcome to <highlight>ADDINVOICES</highlight>",
+    "description": "Product news, how-tos, and ideas to help you invoice faster, get paid on time, and run your business with confidence.",
+    "postsSectionTitle": "Latest articles & updates",
+    "postsSectionDescription": "Guides, release notes, and insights on invoicing, payments, and growing your business with ADDINVOICES.",
+    "ctaTitle": "Stay connected with ADDINVOICES",
+    "ctaDescription": "Join our community to get the latest updates on pricing and exclusive offers!",
+    "contactCta": "Contact Us",
+    "followCta": "Follow Us",
+    "emptyPosts": "No posts right now, come back soon!",
+    "readMore": "Learn more",
+    "FAQs": {
+      "title": "Frequently asked questions",
+      "description": "Have another question? Reach out—we are happy to help.",
+      "questions": {
+        "question1": {
+          "question": "What is ADDINVOICES?",
+          "answer": "ADDINVOICES is smart invoicing software for freelancers and small businesses. Create professional invoices, track payments, accept Stripe and PayPal, and use AI-assisted workflows to save time."
+        },
+        "question2": {
+          "question": "Where can I try or sign up for ADDINVOICES?",
+          "answer": "You can join from our website or app links. We offer a free trial so you can explore features before choosing a plan."
+        },
+        "question3": {
+          "question": "Does ADDINVOICES work on mobile?",
+          "answer": "Yes. ADDINVOICES works as a Progressive Web App (PWA), so you can create and manage invoices from your phone or tablet."
+        },
+        "question4": {
+          "question": "What will I find on this blog?",
+          "answer": "Product updates, invoicing best practices, tips for freelancers and small teams, and news about ADDINVOICES and ADDSTRATEGIC."
+        },
+        "question5": {
+          "question": "How do I get support?",
+          "answer": "Use the contact options on our site or in the app. We are here to help with billing, technical questions, and account issues."
+        },
+        "question6": {
+          "question": "Who builds ADDINVOICES?",
+          "answer": "ADDINVOICES is built by ADDSTRATEGIC—focused on practical tools that help you run your business and get paid faster."
+        }
+      }
+    }
+  },
+  "BlogPost": {
+    "lastUpdate": "Last Update: ",
+    "tableOfContentsMobile": "ON THIS PAGE",
+    "tableOfContents": "Table of contents",
+    "shareBtn": "Share",
+    "otherLanguages": "Other languages",
+    "locale": {
+      "en": "English",
+      "es": "Español"
+    },
+    "brandName": "ADDINVOICES",
+    "brandLogoAlt": "ADDINVOICES logo"
+  }
+}

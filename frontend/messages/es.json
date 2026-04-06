@@ -1,0 +1,376 @@
+{
+  "Metadata": {
+    "title": "ADDINVOICES - Software inteligente de facturacion",
+    "description": "Optimiza tu facturacion con ADDINVOICES. El software inteligente y facil de usar para negocios en crecimiento. Crea facturas profesionales, haz seguimiento de pagos y cobra mas rapido.",
+    "keywords": "software de facturacion, creador de facturas, app de cobro en linea, facturacion para negocios en crecimiento, sistema de gestion de facturas, ADDINVOICES, ADDSTRATEGIC, facturacion inteligente",
+    "imageAlt": "Banner de ADDINVOICES",
+    "twitterTitle": "ADDINVOICES - Software inteligente de facturacion",
+    "twitterDescription": "Optimiza tu facturacion con ADDINVOICES. Crea facturas profesionales y cobra mas rapido."
+  },
+  "Homepage": {
+    "Navbar": {
+      "logoAlt": "Logo ADDSTRATEGIC",
+      "brandShort": "ADDINV.",
+      "join": "Unirme",
+      "toggleMenu": "Abrir menú",
+      "language": {
+        "toggleAriaLabel": "Cambiar idioma",
+        "en": "Ingles",
+        "es": "Espanol"
+      },
+      "links": {
+        "features": "Funciones",
+        "tools": "Herramientas",
+        "pricing": "Precios",
+        "blog": "Blog",
+        "faq": "FAQ"
+      }
+    },
+    "Hero": {
+      "badge": "Software inteligente de facturación",
+      "title": "Crea, envía y gestiona tus facturas en minutos con <brand>ADDINVOICES AI</brand>",
+      "description": "La app de facturación inteligente para freelancers, pequeñas empresas y negocios en crecimiento. Crea facturas profesionales, cobra antes y automatiza tu flujo con un <emphasis>asistente de IA</emphasis> que hace el trabajo pesado por ti.",
+      "ctaEarlyAccess": "Acceso anticipado",
+      "ctaPricing": "Ver precios",
+      "seoTagline": "ADDINVOICES — Software inteligente de facturación por ADDSTRATEGIC.",
+      "googlePlayAlt": "Consíguelo en Google Play",
+      "appStoreAlt": "Descargar en App Store"
+    },
+    "Sponsors": {
+      "title": "Empresas que confían en ADDSTRATEGIC",
+      "subtitle": "Únete a las empresas líderes que ya usan nuestra IA",
+      "logoAlt": "Logo de partner"
+    },
+    "WhyChoose": {
+      "badge": "Por qué elegirnos",
+      "title": "Mucho más que un simple generador de facturas",
+      "subtitle": "ADDINVOICES te ayuda a vender, cobrar y crecer, impulsado por <bold>IA y automatización inteligente</bold>.",
+      "highlights": [
+        {
+          "icon": "mic",
+          "title": "Factura por voz",
+          "description": "Crea facturas con tu voz para máxima comodidad."
+        },
+        {
+          "icon": "bell",
+          "title": "Recordatorios inteligentes",
+          "description": "Recordatorios de pago automáticos y seguimientos inteligentes."
+        },
+        {
+          "icon": "trending",
+          "title": "Insights con IA",
+          "description": "Obtén información inteligente sobre el rendimiento de tu negocio."
+        },
+        {
+          "icon": "palette",
+          "title": "Plantillas de marca",
+          "description": "Plantillas personalizadas acordes a la identidad de tu empresa."
+        }
+      ]
+    },
+    "Waitlist": {
+      "title": "ADDINVOICES",
+      "description": "¡ACABAMOS DE LANZAR! Consigue acceso anticipado a descuentos, nuevas funciones y ofertas exclusivas para ADDINVOICES.",
+      "cta": "Unirme"
+    },
+    "Features": {
+      "title": "Todo lo que necesitas para facturar como un profesional",
+      "subtitle": "Desde facturas con marca hasta seguimiento de pagos en línea. ADDINVOICES combina automatización, diseño y control en una sola plataforma sencilla.",
+      "scrambleText": "pago mundial",
+      "cards": [
+        {
+          "title": "💸 Facturación inteligente",
+          "body": "Crea y envía facturas en segundos con plantillas personalizadas, logos y firmas digitales.",
+          "image": "/feature4.png",
+          "imageAlt": "Facturación inteligente"
+        },
+        {
+          "title": "📩 Pagos integrados",
+          "body": "Acepta pagos con Stripe o PayPal directamente desde tu factura.",
+          "image": "",
+          "imageAlt": "Pagos integrados"
+        },
+        {
+          "title": "📊 Panel e insights",
+          "body": "Consulta ingresos, gastos y facturas pendientes en tiempo real.",
+          "image": "/feature1.jpg",
+          "imageAlt": "Panel e insights"
+        },
+        {
+          "title": "🚀 Flujo automatizado",
+          "body": "Recordatorios de pago automáticos, gestión de clientes y seguimiento de facturas (borrador, enviada, pagada).",
+          "image": "/feature3.png",
+          "imageAlt": "Flujo automatizado"
+        }
+      ]
+    },
+    "Pricing": {
+      "badge": "Precios",
+      "title": "Planes simples sin costes ocultos",
+      "subtitle": "ADDINVOICES se adapta a tu negocio, seas freelancer o una empresa en crecimiento.",
+      "monthly": "Mensual",
+      "yearly": "Anual",
+      "mostPopular": "Más popular",
+      "periodMonth": "mes",
+      "periodYear": "año",
+      "periodOneTime": "pago único",
+      "bottomCta": "Entrar en la app →",
+      "subscriptionPlans": [
+        {
+          "name": "Core",
+          "monthlyPrice": 12,
+          "yearlyPrice": 120,
+          "description": "Ideal para freelancers y equipos pequeños",
+          "popular": false,
+          "cta": "Elegir Core",
+          "features": [
+            "Facturas ilimitadas",
+            "Pagos en línea (Stripe, PayPal)",
+            "Recordatorios de pago",
+            "Plantillas personalizadas",
+            "Acceso web y móvil",
+            "Gestión de clientes",
+            "Seguimiento de facturas (borrador, enviada, pagada)"
+          ]
+        },
+        {
+          "name": "AI Pro",
+          "monthlyPrice": 20,
+          "yearlyPrice": 179.99,
+          "description": "Para empresas y equipos",
+          "popular": true,
+          "cta": "Elegir AI Pro",
+          "features": [
+            "Todo lo de Core",
+            "Flujos automatizados con IA",
+            "Asistente de IA para facturas, clientes, gastos y más",
+            "Generación por voz para facturas, clientes, gastos y más",
+            "Plantillas premium"
+          ]
+        }
+      ],
+      "lifetimePlan": {
+        "name": "Lifetime",
+        "price": 100,
+        "description": "Pago único con acceso de por vida",
+        "highlight": "¡Solo para los primeros 100 usuarios!",
+        "cta": "Obtener acceso Lifetime",
+        "features": [
+          "Todo lo de AI Pro",
+          "Actualizaciones más rápidas",
+          "Soporte prioritario",
+          "Acceso anticipado a nuevas funciones",
+          "Actualizaciones de por vida",
+          "Sin cuotas mensuales"
+        ]
+      }
+    },
+    "NewRelease": {
+      "title": "Empieza a facturar como un profesional hoy",
+      "description": "Crea tu cuenta gratuita, personaliza tus facturas y cobra antes con ADDINVOICES.",
+      "cta": "Empezar",
+      "wordmark": "ADDINVOICES"
+    },
+    "FAQSection": {
+      "pill": "Preguntas frecuentes",
+      "title": "¿Preguntas? Tenemos <highlight>respuestas</highlight>",
+      "items": [
+        {
+          "question": "¿Qué es ADDINVOICES?",
+          "answer": "ADDINVOICES es un software inteligente de facturación para freelancers, pequeñas empresas y empresas en crecimiento. Te ayuda a crear facturas profesionales, gestionar clientes, seguir pagos y automatizar tu facturación."
+        },
+        {
+          "question": "¿Cómo funciona la prueba gratuita?",
+          "answer": "Puedes empezar una prueba gratuita de 7 días con acceso completo a todas las funciones. Sin tarjeta de crédito. Después, elige entre Core (12 $/mes) o AI Pro (20 $/mes)."
+        },
+        {
+          "question": "¿Puedo aceptar pagos en línea?",
+          "answer": "¡Sí! El plan AI Pro incluye pagos integrados con Stripe y PayPal para que tus clientes paguen directamente desde la factura."
+        },
+        {
+          "question": "¿Mis datos están seguros?",
+          "answer": "Por supuesto. ADDINVOICES usa cifrado de nivel empresarial y estándares de seguridad del sector. Tus facturas y datos de clientes están protegidos."
+        },
+        {
+          "question": "¿Puedo usar ADDINVOICES en el móvil?",
+          "answer": "¡Sí! ADDINVOICES está disponible como PWA, para crear y gestionar facturas desde cualquier dispositivo, incluidos móviles y tabletas."
+        },
+        {
+          "question": "¿Qué métodos de pago se admiten?",
+          "answer": "ADDINVOICES admite Stripe y PayPal. También estamos trabajando en integrar más pasarelas de pago."
+        }
+      ]
+    },
+    "Testimonials": {
+      "pill": "Testimonios",
+      "title": "Lo que dicen nuestros usuarios",
+      "subtitle": "Únete a miles de freelancers y empresas que usan ADDINVOICES para cobrar antes y gestionar la facturación sin esfuerzo.",
+      "shareCta": "Comparte tu experiencia",
+      "items": [
+        {
+          "name": "Carlos R.",
+          "username": "Diseñador web",
+          "body": "Desde que uso ADDINVOICES, cobro 3 veces más rápido.",
+          "img": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Marta G.",
+          "username": "Emprendedora",
+          "body": "Puedo crear y enviar una factura desde el móvil en menos de 2 minutos.",
+          "img": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "David Chen",
+          "username": "Desarrollador freelance",
+          "body": "ADDINVOICES ha simplificado toda mi facturación. ¡Adiós a perseguir pagos!",
+          "img": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Sarah Johnson",
+          "username": "Propietaria de PYME",
+          "body": "El panel me da visibilidad en tiempo real del flujo de caja. ¡Un cambio total!",
+          "img": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Michael Torres",
+          "username": "Consultor",
+          "body": "Facturas profesionales acordes a mi marca. A los clientes les encantan los enlaces de pago.",
+          "img": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Emma Wilson",
+          "username": "Agencia de diseño",
+          "body": "Los recordatorios automáticos me ahorran hacer seguimiento a mano.",
+          "img": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "James Anderson",
+          "username": "Consultor de marketing",
+          "body": "La app móvil es perfecta para facturar en movimiento. ¡Muy recomendable!",
+          "img": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Lisa Park",
+          "username": "Directora creativa",
+          "body": "Gestión de clientes y facturas en un solo sitio. Justo lo que necesitaba.",
+          "img": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Robert Kim",
+          "username": "Servicios TI",
+          "body": "Los pagos en línea integrados funcionan de maravilla. Mis clientes pagan antes.",
+          "img": "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Amanda Lee",
+          "username": "Fotógrafa",
+          "body": "Plantillas bonitas que hacen que mis facturas se vean profesionales.",
+          "img": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Thomas Brown",
+          "username": "Arquitecto",
+          "body": "El seguimiento de gastos me mantiene organizado. ¡Gran herramienta!",
+          "img": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Rachel Green",
+          "username": "Creadora de contenido",
+          "body": "Simple, rápido y fiable. ADDINVOICES ha hecho la facturación muy fácil.",
+          "img": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Daniel White",
+          "username": "Coach de negocios",
+          "body": "El panel de analíticas me muestra exactamente de dónde viene mi facturación.",
+          "img": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Olivia Martinez",
+          "username": "Organizadora de eventos",
+          "body": "Varios clientes, varias facturas, todo perfectamente organizado. ¡Gracias!",
+          "img": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Chris Taylor",
+          "username": "Desarrollador de software",
+          "body": "La mejor app de facturación que he usado. Interfaz limpia y funciones potentes.",
+          "img": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face"
+        }
+      ]
+    },
+    "Footer": {
+      "bannerAlt": "Logo ADDSTRATEGIC",
+      "links": {
+        "features": "Funciones",
+        "pricing": "Precios",
+        "testimonials": "Testimonios",
+        "faq": "FAQ"
+      },
+      "facebookLabel": "Facebook",
+      "instagramLabel": "Instagram",
+      "copyright": "© 2025 ADDINVOICES — Impulsado por ADDSTRATEGIC |",
+      "privacy": "Política de privacidad",
+      "terms": "Términos del servicio"
+    }
+  },
+  "Blog": {
+    "Metadata": {
+      "title": "Blog de ADDINVOICES",
+      "description": "Consejos de facturación inteligente, novedades del producto y guías para negocios en crecimiento que usan ADDINVOICES."
+    },
+    "title": "Bienvenido a <highlight>ADDINVOICES</highlight>",
+    "description": "Notas de producto, tutoriales e ideas para facturar más rápido, cobrar a tiempo y llevar tu negocio con ADDINVOICES.",
+    "postsSectionTitle": "Últimos artículos y novedades",
+    "postsSectionDescription": "Guías, notas de versión e ideas sobre facturación, pagos y crecimiento con ADDINVOICES.",
+    "ctaTitle": "Mantente conectado con ADDINVOICES",
+    "ctaDescription": "¡Únete a nuestra comunidad para obtener las últimas actualizaciones sobre los precios y ofertas exclusivas!",
+    "contactCta": "Contáctanos",
+    "followCta": "Siguenos",
+    "emptyPosts": "No hay publicaciones por el momento, ¡vuelve pronto!",
+    "readMore": "Ver más",
+    "FAQs": {
+      "title": "Preguntas frecuentes",
+      "description": "¿Tienes otra pregunta? Escríbenos; estaremos encantados de ayudarte.",
+      "questions": {
+        "question1": {
+          "question": "¿Qué es ADDINVOICES?",
+          "answer": "ADDINVOICES es un software inteligente de facturación para freelancers y pequeñas empresas. Crea facturas profesionales, sigue los cobros, acepta Stripe y PayPal y ahorra tiempo con flujos asistidos por IA."
+        },
+        "question2": {
+          "question": "¿Dónde puedo probar o registrarme en ADDINVOICES?",
+          "answer": "Puedes unirte desde nuestra web o los enlaces a la app. Ofrecemos una prueba gratuita para que explores las funciones antes de elegir un plan."
+        },
+        "question3": {
+          "question": "¿ADDINVOICES funciona en el móvil?",
+          "answer": "Sí. ADDINVOICES funciona como aplicación web progresiva (PWA), así que puedes crear y gestionar facturas desde el teléfono o la tableta."
+        },
+        "question4": {
+          "question": "¿Qué encontraré en este blog?",
+          "answer": "Novedades del producto, buenas prácticas de facturación, consejos para freelancers y equipos pequeños, y noticias sobre ADDINVOICES y ADDSTRATEGIC."
+        },
+        "question5": {
+          "question": "¿Cómo obtengo soporte?",
+          "answer": "Usa las opciones de contacto en la web o en la app. Te ayudamos con facturación, dudas técnicas y tu cuenta."
+        },
+        "question6": {
+          "question": "¿Quién desarrolla ADDINVOICES?",
+          "answer": "ADDINVOICES lo desarrolla ADDSTRATEGIC, con herramientas prácticas para gestionar tu negocio y cobrar antes."
+        }
+      }
+    }
+  },
+  "BlogPost": {
+    "lastUpdate": "Última actualización: ",
+    "tableOfContentsMobile": "EN ESTA PÁGINA",
+    "tableOfContents": "Tabla de contenidos",
+    "shareBtn": "Compartir",
+    "otherLanguages": "Otros idiomas",
+    "locale": {
+      "en": "English",
+      "es": "Español"
+    },
+    "brandName": "ADDINVOICES",
+    "brandLogoAlt": "Logo de ADDINVOICES"
+  }
+}
