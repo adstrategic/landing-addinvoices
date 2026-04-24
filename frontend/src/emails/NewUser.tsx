@@ -10,7 +10,7 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 
-const baseUrl = "https://addinvoicesai.com";
+const baseUrl = "https://www.addinvoicesai.com";
 
 interface NewUserProps {
   email: string;

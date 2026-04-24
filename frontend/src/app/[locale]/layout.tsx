@@ -14,7 +14,7 @@ import Navbar from "@/components/navbar";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
-const FALLBACK_BASE_URL = "https://addinvoicesia.com";
+const FALLBACK_BASE_URL = "https://www.addinvoicesai.com";
 const LOCALE_TO_OG: Record<Locale, string> = {
   en: "en_US",
   es: "es_ES",

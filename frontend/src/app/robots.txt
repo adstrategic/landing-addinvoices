@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://addinvoicesia.com/sitemap.xml
+Sitemap: https://www.addinvoicesai.com/sitemap.xml

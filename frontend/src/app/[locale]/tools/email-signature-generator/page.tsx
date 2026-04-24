@@ -108,7 +108,7 @@ export default function EmailSignatureGeneratorPage() {
     ${data.website ? `<a href="${data.website}" style="color: #666; text-decoration: none;">${data.website}</a>` : ""}
   </div>
   <div style="font-size: 12px; color: #999; margin-top: 15px; border-top: 1px solid #eee; pt: 10px;">
-    Made with <a href="https://addinvoicesai.com" style="color: ${accentColor}; text-decoration: none; font-weight: bold;">AddInvoices</a>
+    Made with <a href="https://www.addinvoicesai.com" style="color: ${accentColor}; text-decoration: none; font-weight: bold;">AddInvoices</a>
   </div>
 </div>`;
   };

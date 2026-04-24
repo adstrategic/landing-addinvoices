@@ -5,7 +5,7 @@ import { routing, type Locale } from "@/i18n/routing";
 import { getListOfPosts } from "@/lib/queries";
 import type { Post } from "@/types/posts";
 
-const FALLBACK_BASE_URL = "https://addinvoicesia.com";
+const FALLBACK_BASE_URL = "https://www.addinvoicesai.com";
 const APP_LOCALE_DIR = path.join(process.cwd(), "src", "app", "[locale]");
 
 function getBaseUrl() {
@@ -21,7 +21,10 @@ function withLocale(pathname: string, locale: Locale): string {
   return cleanPath === "/" ? `/${locale}` : `/${locale}${cleanPath}`;
 }
 
-async function getStaticRoutePaths(dir: string, prefix = ""): Promise<string[]> {
+async function getStaticRoutePaths(
+  dir: string,
+  prefix = "",
+): Promise<string[]> {
   const entries = await readdir(dir, { withFileTypes: true });
   const routes: string[] = [];
 
@@ -50,7 +53,9 @@ async function getStaticRoutePaths(dir: string, prefix = ""): Promise<string[]> 
   return routes;
 }
 
-async function getLocalizedBlogPosts(baseUrl: string): Promise<MetadataRoute.Sitemap> {
+async function getLocalizedBlogPosts(
+  baseUrl: string,
+): Promise<MetadataRoute.Sitemap> {
   const postEntries: MetadataRoute.Sitemap = [];
 
   const fetchPostsForLocale = async (locale: Locale) => {
@@ -79,7 +84,9 @@ async function getLocalizedBlogPosts(baseUrl: string): Promise<MetadataRoute.Sit
     }
   };
 
-  await Promise.all(routing.locales.map((locale) => fetchPostsForLocale(locale)));
+  await Promise.all(
+    routing.locales.map((locale) => fetchPostsForLocale(locale)),
+  );
 
   return postEntries;
 }

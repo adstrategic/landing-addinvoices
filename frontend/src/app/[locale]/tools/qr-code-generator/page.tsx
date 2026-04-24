@@ -18,7 +18,7 @@ import Watermark from "@/components/watermark";
 
 export default function QRCodeGeneratorPage() {
   const [type, setType] = useState<"url" | "text" | "email" | "phone">("url");
-  const [url, setUrl] = useState("https://addinvoicesai.com");
+  const [url, setUrl] = useState("https://www.addinvoicesai.com");
   const [text, setText] = useState("");
   const [email, setEmail] = useState("");
   const [emailSubject, setEmailSubject] = useState("");
@@ -36,7 +36,7 @@ export default function QRCodeGeneratorPage() {
   const getQRValue = () => {
     switch (type) {
       case "url":
-        return url || "https://addinvoicesai.com";
+        return url || "https://www.addinvoicesai.com";
       case "text":
         return text || "AddInvoices";
       case "email":
@@ -44,7 +44,7 @@ export default function QRCodeGeneratorPage() {
       case "phone":
         return `tel:${phoneNumber}`;
       default:
-        return "https://addinvoicesai.com";
+        return "https://www.addinvoicesai.com";
     }
   };
 
